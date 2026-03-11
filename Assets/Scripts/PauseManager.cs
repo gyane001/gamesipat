@@ -51,4 +51,12 @@ public class PauseManager : MonoBehaviour
         // Carrega a cena de índice 0 (que definimos como o Menu Principal)
         SceneManager.LoadScene(0);
     }
+
+    public void LoadMapas()
+    {
+        Time.timeScale = 1f;
+        isPaused = false;
+        
+        SceneManager.LoadScene(2);
+    }
 }
