@@ -3960,7 +3960,7 @@ MonoBehaviour:
   visualCue: {fileID: 0}
   inkJSON: {fileID: 4900000, guid: 392d62a73e2af5f4fb67e7373efc390f, type: 3}
   isBarrier: 1
-  sceneToLoad: Adm
+  sceneToLoad: Fabrica
   fazParteDoQuiz: 0
   acertouQuiz: 0
   mobileButton: {fileID: 0}
