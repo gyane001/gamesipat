@@ -62,6 +62,14 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
+    public ChangeScenesTo()
+    {
+        
+    }
+        
+
+
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag("Player"))
@@ -76,7 +84,8 @@ public class DialogueTrigger : MonoBehaviour
                 {
                     Debug.Log("Todos os quizzes resolvidos! Carregando cena...");
                     // Carrega a próxima cena baseada no Index atual + 1
-                    StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+                    //StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+                SceneManager.LoadScene("Adm");
                 }
                 else
                 {
