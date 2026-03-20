@@ -62,12 +62,6 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
-    public ChangeScenesTo()
-    {
-        
-    }
-        
-
 
 
     private void OnTriggerEnter2D(Collider2D collider)
