@@ -6123,6 +6123,7 @@ GameObject:
   - component: {fileID: 1002209152}
   - component: {fileID: 1002209151}
   - component: {fileID: 1002209154}
+  - component: {fileID: 1002209155}
   m_Layer: 0
   m_Name: Barreira - PontoFinal
   m_TagString: Untagged
@@ -6278,13 +6279,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1002209149}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0689f6046a9650c46bb2c66ec9a89ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nomeDaCena: Mapas
+  caminhoEscolhido: 0
+--- !u!114 &1002209155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002209149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb5cd0644bbe0c84fbfd7ee97f8982d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 3903081932388197795}
+  transition: {fileID: 0}
   transitionTime: 1
   visualCue: {fileID: 0}
-  inkJSON: {fileID: 4900000, guid: 392d62a73e2af5f4fb67e7373efc390f, type: 3}
+  inkJSON: {fileID: 0}
   isBarrier: 1
   sceneToLoad: Mapas
   fazParteDoQuiz: 0
@@ -11398,7 +11413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2358879706206979369, guid: 9562e12262646b4489cb3486fb950241, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3337761937680203729, guid: 9562e12262646b4489cb3486fb950241, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11448,16 +11463,12 @@ PrefabInstance:
       propertyPath: m_ScreenMatchMode
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2544996312483075813, guid: 9562e12262646b4489cb3486fb950241, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9562e12262646b4489cb3486fb950241, type: 3}
---- !u!95 &3903081932388197795 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1415258255715434418, guid: 9562e12262646b4489cb3486fb950241, type: 3}
-  m_PrefabInstance: {fileID: 3903081932388197794}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6982477986143034868
 PrefabInstance:
   m_ObjectHideFlags: 0

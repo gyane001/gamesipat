@@ -79,7 +79,7 @@ public class DialogueTrigger : MonoBehaviour
                     Debug.Log("Todos os quizzes resolvidos! Carregando cena...");
                     // Carrega a próxima cena baseada no Index atual + 1
                     //StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-                SceneManager.LoadScene("Adm");
+                SceneManager.LoadScene(sceneToLoad);
                 }
                 else
                 {

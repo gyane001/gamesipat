@@ -3465,7 +3465,6 @@ GameObject:
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
   - component: {fileID: 519420035}
-  - component: {fileID: 519420036}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3667,18 +3666,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9119c83ea63f314085de6fb7bc40037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &519420036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &525319704
@@ -3952,18 +3939,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 548961105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb5cd0644bbe0c84fbfd7ee97f8982d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c931159496ece4418a5d39558276d25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 952958077}
-  transitionTime: 1
-  visualCue: {fileID: 0}
-  inkJSON: {fileID: 4900000, guid: 392d62a73e2af5f4fb67e7373efc390f, type: 3}
   isBarrier: 1
-  sceneToLoad: Adm
-  fazParteDoQuiz: 0
-  acertouQuiz: 0
-  mobileButton: {fileID: 0}
 --- !u!114 &555235752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7119,6 +7098,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2544996312483075813, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2544996312483075813, guid: 9562e12262646b4489cb3486fb950241, type: 3}
       propertyPath: sceneToLoad
       value: Adm
       objectReference: {fileID: 0}
@@ -7166,16 +7149,33 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2544996312483075813, guid: 9562e12262646b4489cb3486fb950241, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2358879706206979369, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 952958078}
   m_SourcePrefab: {fileID: 100100000, guid: 9562e12262646b4489cb3486fb950241, type: 3}
---- !u!95 &952958077 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1415258255715434418, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+--- !u!1 &952958077 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2358879706206979369, guid: 9562e12262646b4489cb3486fb950241, type: 3}
   m_PrefabInstance: {fileID: 952958076}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &952958078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952958077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c931159496ece4418a5d39558276d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBarrier: 1
 --- !u!1 &957862210
 GameObject:
   m_ObjectHideFlags: 0

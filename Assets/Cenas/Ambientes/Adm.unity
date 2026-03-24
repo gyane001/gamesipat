@@ -2638,18 +2638,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 548961105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb5cd0644bbe0c84fbfd7ee97f8982d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c931159496ece4418a5d39558276d25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 737390530}
-  transitionTime: 1
-  visualCue: {fileID: 0}
-  inkJSON: {fileID: 4900000, guid: 392d62a73e2af5f4fb67e7373efc390f, type: 3}
   isBarrier: 1
-  sceneToLoad: FimDeJogo
-  fazParteDoQuiz: 0
-  acertouQuiz: 0
-  mobileButton: {fileID: 0}
 --- !u!1 &560236629
 GameObject:
   m_ObjectHideFlags: 0
@@ -3466,35 +3458,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2358879706206979369, guid: 9562e12262646b4489cb3486fb950241, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 737390532}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9562e12262646b4489cb3486fb950241, type: 3}
---- !u!95 &737390530 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1415258255715434418, guid: 9562e12262646b4489cb3486fb950241, type: 3}
-  m_PrefabInstance: {fileID: 737390529}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &737390531 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2358879706206979369, guid: 9562e12262646b4489cb3486fb950241, type: 3}
-  m_PrefabInstance: {fileID: 737390529}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &737390532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 737390531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0689f6046a9650c46bb2c66ec9a89ca2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nomeDaCena: 
-  caminhoEscolhido: 1
 --- !u!1 &790127784
 GameObject:
   m_ObjectHideFlags: 0
