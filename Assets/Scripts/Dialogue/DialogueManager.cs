@@ -17,7 +17,7 @@ public class DialogueManager : MonoBehaviour
     [Header("UI do Diálogo")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
-    [SerializeField] private TextMeshProUGUI displayNameText;
+   
     [SerializeField] private Animator portraitAnimator;
     [SerializeField] private GameObject continueIcon; // A setinha que pisca
 
@@ -88,7 +88,7 @@ public class DialogueManager : MonoBehaviour
         npcAtual = npc;
 
         // Reseta as tags para o padrão antes de começar
-        displayNameText.text = "???";
+      
         if (portraitAnimator != null) portraitAnimator.Play("default");
 
         ContinueStory();
@@ -99,7 +99,7 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
-        displayNameText.text = "";
+      
 
         if (continueIcon != null) continueIcon.SetActive(false);
     }
@@ -189,9 +189,6 @@ public class DialogueManager : MonoBehaviour
 
             switch (tagKey)
             {
-                case SPEAKER_TAG:
-                    displayNameText.text = tagValue;
-                    break;
                 case PORTRAIT_TAG:
                     if (portraitAnimator != null) portraitAnimator.Play(tagValue);
                     break;
