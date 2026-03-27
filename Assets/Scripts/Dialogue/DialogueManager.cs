@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     [Header("UI do Diálogo")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
-   
+
     [SerializeField] private Animator portraitAnimator;
     [SerializeField] private GameObject continueIcon; // A setinha que pisca
 
@@ -38,6 +38,7 @@ public class DialogueManager : MonoBehaviour
     private const string PORTRAIT_TAG = "portrait";
     // private const string LAYOUT_TAG = "layout"; // Removido pois não estava sendo usado no exemplo
     private const string WIN_TAG = "win";
+    public int scoreTotal = 0;
 
     private void Awake()
     {
@@ -89,7 +90,7 @@ public class DialogueManager : MonoBehaviour
         npcAtual = npc;
 
         // Reseta as tags para o padrão antes de começar
-      
+
         if (portraitAnimator != null) portraitAnimator.Play("default");
 
         ContinueStory();
@@ -100,7 +101,7 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
-      
+
 
         if (continueIcon != null) continueIcon.SetActive(false);
     }
@@ -167,20 +168,26 @@ public class DialogueManager : MonoBehaviour
     }
 
     private void HandleTags(List<string> currentTags)
+{
+    foreach (string tag in currentTags)
     {
-        foreach (string tag in currentTags)
+        string cleanTag = tag.Trim().ToLower(); // Usar ToLower evita erros de digitação
+
+        if (cleanTag == WIN_TAG)
         {
-            string cleanTag = tag.Trim();
-
-            if (cleanTag == WIN_TAG)
+            if (npcAtual != null && !npcAtual.acertouQuiz) 
             {
-                if (npcAtual != null)
-                {
-                    npcAtual.acertouQuiz = true;
+                npcAtual.acertouQuiz = true;
+                
+                // OPÇÃO A: Salvar na classe estática (Global entre cenas)
+                GameData.totalWins++; 
+                
+                // OPÇÃO B: Salvar localmente no Manager
+                scoreTotal++;
 
-                    // Debug.Log removido para limpar o console, mas pode descomentar
-                }
-                continue;
+                Debug.Log("Acertos totais: " + GameData.totalWins);
+            }
+            continue;
             }
 
             string[] splitTag = cleanTag.Split(':');
