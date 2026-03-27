@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     [Header("Parâmetros de Diálogo")]
-    [SerializeField] private float typingSpeed = 0.04f; // Aumentei um pouco, 0.001 é muito rápido
+    [SerializeField] private float typingSpeed = 0.08f; // Aumentei um pouco, 0.001 é muito rápido
 
     // Variável que controla se o player pode avançar
     private bool canContinueToNextLine = false;
@@ -176,6 +176,8 @@ public class DialogueManager : MonoBehaviour
                 if (npcAtual != null)
                 {
                     npcAtual.acertouQuiz = true;
+                    
+
                     // Debug.Log removido para limpar o console, mas pode descomentar
                 }
                 continue;

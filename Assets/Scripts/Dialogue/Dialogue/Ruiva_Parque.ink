@@ -7,24 +7,11 @@
     -> Pergunta1Parque
 
  === Pergunta1Parque ===
-#portrait:default
-Com base no procedimento de emergência, qual é a principal função do Ponto de Encontro?
+Durante o trajeto até o seu local de trabalho você chega a um cruzamento interno onde circulam alguns veículos. O que você faz? #portrait:default
 
-*[É a área de destino para onde os colaboradores devem ir após o alarme contínuo e onde devem aguardar a liberação da brigada.]
+*[Aguardo a parada dos veículos, mantendo contato visual com o motorista e atravesso na faixa de pedestres.] //CORRETA #win
     -> fim
-    
-*[É o local onde a brigada se reúne para avaliar o risco inicial.]
-#portrait:Ruiva_Sad
-Ops! Não é essa opção. Tente de novo. 
-     -> fim
-
-*[É o local onde ficam guardados os EPIs e equipamentos de emergência.]
-#portrait:Ruiva_Sad
-Ops! Não é essa opção. Tente de novo. 
-     -> fim
-
  
-  
 === fim ===
 ##portrait:default
 Acabou o dialogo

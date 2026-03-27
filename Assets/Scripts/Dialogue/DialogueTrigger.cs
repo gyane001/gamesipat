@@ -136,6 +136,8 @@ private void OnTriggerExit2D(Collider2D collider)
                 Debug.Log("O jogador ainda não passou pelo NPC: " + npc.gameObject.name);
                 return false; // Retorna falso imediatamente, impedindo a passagem
             }
+
+            if (npc.acertouQuiz) continue;
         }
 
         // Se o loop terminou e não encontrou ninguém "falso", então todos são verdadeiros
