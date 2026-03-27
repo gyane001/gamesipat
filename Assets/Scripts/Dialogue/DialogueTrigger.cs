@@ -62,58 +62,39 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
-
-
     private void OnTriggerEnter2D(Collider2D collider)
+{
+    if (collider.CompareTag("Player"))
     {
-        if (collider.CompareTag("Player"))
-        {
-            playerInRange = true;
+        playerInRange = true;
 
-            // --- LÓGICA DA BARREIRA ATUALIZADA ---
-            if (isBarrier)
+        if (isBarrier)
+        {
+            if (VerificarTodosOsQuizzes())
             {
-                // Verifica se TODOS os NPCs da cena foram vencidos
-                if (VerificarTodosOsQuizzes())
-                {
-                    Debug.Log("Todos os quizzes resolvidos! Carregando cena...");
-                    // Carrega a próxima cena baseada no Index atual + 1
-                    //StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-                SceneManager.LoadScene(sceneToLoad);
-                }
-                else
-                {
-                    // Se faltar algum, inicia o diálogo da barreira
-                    Debug.Log("Acesso negado. O jogador ainda não completou todos os quizzes.");
-                    StartDialogue();
-                }
+                StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
             }
-            // --- LÓGICA PARA NPC COMUM (Se NÃO for barreira) ---
             else
             {
-                if (mobileButton != null)
-                {
-                    mobileButton.gameObject.SetActive(true);
-                    mobileButton.onClick.RemoveAllListeners();
-                    mobileButton.onClick.AddListener(StartDialogue);
-                }
+                StartDialogue();
             }
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collider)
-    {
-        if (collider.CompareTag("Player"))
+        else
         {
-            playerInRange = false;
-
-            if (mobileButton != null)
-            {
-                mobileButton.onClick.RemoveListener(StartDialogue);
-                mobileButton.gameObject.SetActive(false);
-            }
+            // ✅ Inicia o diálogo direto pela colisão, sem precisar do botão
+            StartDialogue();
         }
     }
+}
+
+private void OnTriggerExit2D(Collider2D collider)
+{
+    if (collider.CompareTag("Player"))
+    {
+        playerInRange = false;
+        // Nada mais necessário aqui, já que o botão foi removido
+    }
+}
 
     // --- COROUTINE MOVIDA PARA O LUGAR CERTO ---
     IEnumerator LoadLevel(int levelIndex)
