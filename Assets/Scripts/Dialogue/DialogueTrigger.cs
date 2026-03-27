@@ -72,7 +72,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             if (VerificarTodosOsQuizzes())
             {
-                StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+                SceneManager.LoadScene(sceneToLoad);
             }
             else
             {
@@ -84,6 +84,7 @@ public class DialogueTrigger : MonoBehaviour
             // ✅ Inicia o diálogo direto pela colisão, sem precisar do botão
             StartDialogue();
         }
+        
     }
 }
 

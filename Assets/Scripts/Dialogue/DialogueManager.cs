@@ -5,6 +5,7 @@ using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -176,7 +177,6 @@ public class DialogueManager : MonoBehaviour
                 if (npcAtual != null)
                 {
                     npcAtual.acertouQuiz = true;
-                    
 
                     // Debug.Log removido para limpar o console, mas pode descomentar
                 }
