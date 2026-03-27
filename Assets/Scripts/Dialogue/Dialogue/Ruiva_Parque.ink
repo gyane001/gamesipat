@@ -21,7 +21,7 @@ Ops! Não é essa opção. Tente de novo.
 *[É o local onde ficam guardados os EPIs e equipamentos de emergência.]
 #portrait:Ruiva_Sad
 Ops! Não é essa opção. Tente de novo. 
-      -> fim
+     -> fim
 
  
   
