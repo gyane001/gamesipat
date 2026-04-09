@@ -167,27 +167,20 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void HandleTags(List<string> currentTags)
-{
-    foreach (string tag in currentTags)
+ private void HandleTags(List<string> currentTags)
     {
-        string cleanTag = tag.Trim().ToLower(); // Usar ToLower evita erros de digitação
-
-        if (cleanTag == WIN_TAG)
+        foreach (string tag in currentTags)
         {
-            if (npcAtual != null && !npcAtual.acertouQuiz) 
-            {
-                npcAtual.acertouQuiz = true;
-                
-                // OPÇÃO A: Salvar na classe estática (Global entre cenas)
-                GameData.totalWins++; 
-                
-                // OPÇÃO B: Salvar localmente no Manager
-                scoreTotal++;
+            string cleanTag = tag.Trim();
 
-                Debug.Log("Acertos totais: " + GameData.totalWins);
-            }
-            continue;
+            if (cleanTag == WIN_TAG)
+            {
+                if (npcAtual != null)
+                {
+                    npcAtual.acertouQuiz = true;
+                    // Debug.Log removido para limpar o console, mas pode descomentar
+                }
+                continue;
             }
 
             string[] splitTag = cleanTag.Split(':');

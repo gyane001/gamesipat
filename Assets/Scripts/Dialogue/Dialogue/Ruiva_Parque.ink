@@ -6,7 +6,7 @@ pergunta? #portrait:default
 *[CERTO.] #win //CORRETA 
     -> fim
     
-*[ERRADO.] 
+*[ERRADO.] #portrait:Loira_Happy
     -> fim
  
 === fim ===
