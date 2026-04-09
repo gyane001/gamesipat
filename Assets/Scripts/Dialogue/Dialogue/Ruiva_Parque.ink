@@ -1,20 +1,19 @@
     -> SituacaoPF_1_1
 
  === SituacaoPF_1_1 ===
-Durante o trajeto até o seu local de trabalho você chega a um cruzamento interno onde circulam alguns veículos.
-Há faixa de pedestre sinalizada no local. O que você faz? #portrait:default
+Durante o trajeto até o seu local de trabalho você chega a um cruzamento interno onde circulam alguns veículos. Há faixa de pedestre sinalizada no local. O que você faz? #portrait:default
 
-*[Aguardo a parada dos veículos, mantendo contato visual com o motorista e atravesso na faixa de pedestres.] #win //CORRETA 
+*[Aguardo a parada dos veículos, mantendo contato visual com o motorista e atravesso na faixa de pedestres.] #win #portrait: PF_SITU_11
 Ótima escolha! Utilizar a faixa, manter contato visual e aguardar a parada total garante que você foi visto.
 Segurança no deslocamento depende da atenção de todos.
     -> SituacaoPF_1_2
     
-*[Atravesso na faixa sem aguardar, pois, tenho prioridade.] 
-Perigoso! Mesmo estando na faixa, é essencial fazer contato visual e garantir a parada total do veículo. Contamos com você!
+*[Atravesso na faixa sem aguardar, pois, tenho prioridade.]
+Perigoso! Mesmo estando na faixa, é essencial fazer contato visual e garantir a parada total do veículo. Contamos com você!.] #portrait:PF_SITU_12
     -> SituacaoPF_1_2
     
 *[Atravesso fora da faixa para, chegar mais rápido.] 
-Perigoso! Atravessar fora da faixa reduz a visibilidade e aumenta o risco de atropelamento. Aguarde a parada dos veículos, mantenha contato visual com o motorista e atravesse na faixa de pedestres.
+Perigoso! Atravessar fora da faixa reduz a visibilidade e aumenta o risco de atropelamento. Aguarde a parada dos veículos, mantenha contato visual com o motorista e atravesse na faixa de pedestres. #portrait:PF_SITU_13
     -> SituacaoPF_1_2
  
  
