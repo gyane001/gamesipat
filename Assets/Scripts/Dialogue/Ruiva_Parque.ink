@@ -1,7 +1,7 @@
     -> SituacaoPF_1_1
 
  === SituacaoPF_1_1 ===
-Durante o trajeto até o seu local de trabalho você chega a um cruzamento interno onde circulam alguns veículos. Há faixa de pedestre sinalizada no local. O que você faz? #portrait:default
+Ruiva parque? #portrait:default
 
 *[Aguardo a parada dos veículos, mantendo contato visual com o motorista e atravesso na faixa de pedestres.] #win #portrait: PF_SITU_11
 Ótima escolha! Utilizar a faixa, manter contato visual e aguardar a parada total garante que você foi visto.

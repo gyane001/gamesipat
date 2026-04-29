@@ -10,7 +10,7 @@ using Unity.VisualScripting;
 public class DialogueManager : MonoBehaviour
 {
     [Header("Parâmetros de Diálogo")]
-    [SerializeField] private float typingSpeed = 0.03f; // Aumentei um pouco, 0.001 é muito rápido
+    [SerializeField] private float typingSpeed = 0.001f; // Aumentei um pouco, 0.001 é muito rápido
 
     // Variável que controla se o player pode avançar
     private bool canContinueToNextLine = false;
