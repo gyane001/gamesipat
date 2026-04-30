@@ -39,9 +39,6 @@ AnimatorStateMachine:
     m_State: {fileID: -5416183107222930574}
     m_Position: {x: 970, y: -10, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 5209880136730268458}
-    m_Position: {x: 1090, y: 290, z: 0}
-  - serializedVersion: 1
     m_State: {fileID: -6613620898145777495}
     m_Position: {x: 1090, y: 340, z: 0}
   - serializedVersion: 1
@@ -83,6 +80,12 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -2305035966788386255}
     m_Position: {x: 1930, y: 390, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -7422736916487237693}
+    m_Position: {x: 1510, y: 210, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 6010335378795498204}
+    m_Position: {x: 1090, y: 290, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: -6061707804388244075}
@@ -117,6 +120,32 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 38e6894ac9b958a4484c8ef1271b4cf6, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &-7422736916487237693
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TESTE
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 7f8a86c6586ff314399fdbf59767f712, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -429,7 +458,7 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &5209880136730268458
+--- !u!1102 &6010335378795498204
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
@@ -437,7 +466,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PF_ADM_11
-  m_Speed: 1
+  m_Speed: 0.5
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -449,11 +478,11 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: b194700b238457b44bf69aec79f359aa, type: 2}
+  m_Motion: {fileID: 7400000, guid: 6825cf30c45cc244a8d5e8c5f05c18a3, type: 2}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: Blend
   m_MirrorParameter: 
-  m_CycleOffsetParameter: 
+  m_CycleOffsetParameter: Blend
   m_TimeParameter: 
 --- !u!1102 &6111421814769415701
 AnimatorState:
