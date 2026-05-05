@@ -20,4 +20,5 @@ Uma gaveta de arquivo está aberta parcialmente. O que você faz?
     -> Fim
 
 === Fim ===
+Siga em frente para continuar. #portrait:default
 -> DONE

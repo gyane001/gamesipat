@@ -9,7 +9,7 @@ Piso molhado próximo ao banheiro: Há uma placa de “Piso Molhado” e uma peq
     -> Fim
 
 *[Desvio da área sinalizada]
-    Muito bem! Pisos molhados podem ser grandes causadores de quedas em áreas administrativas. Prevenção evita acidentes. #win #portrait:PF_ADM_12
+    Muito bem! Pisos molhados podem ser grandes causadores de quedas em áreas administrativas. Prevenção evita acidentes.#portrait:PF_ADM_12 #win 
     -> Fim
 
 *[Ignoro a placa e passo pela área molhada]
@@ -17,4 +17,5 @@ Piso molhado próximo ao banheiro: Há uma placa de “Piso Molhado” e uma peq
     -> Fim
 
 === Fim ===
+Siga em frente para continuar. #portrait:default
 -> DONE

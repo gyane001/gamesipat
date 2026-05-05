@@ -8,8 +8,8 @@ Você percebe um fio exposto próximo a uma mesa de trabalho. O que você faz?
     Ignorar riscos elétricos pode gerar acidentes graves. Sempre sinalize e comunique imediatamente. #portrait:PF_ADM_51
     -> Fim
 
-*[Sinalizo o local e informo imediatamente o responsável]
-    Fios expostos representam risco de choque e tropeços. #win #portrait:PF_ADM_52
+*[Informo imediatamente o responsável]
+    Fios expostos representam risco de choque e tropeços. #portrait:PF_ADM_52 #win
     -> Fim
 
 *[Passo por cima do fio]
@@ -17,4 +17,5 @@ Você percebe um fio exposto próximo a uma mesa de trabalho. O que você faz?
     -> Fim
 
 === Fim ===
+Siga em frente para continuar. #portrait:default
 -> DONE

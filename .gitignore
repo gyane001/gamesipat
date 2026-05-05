@@ -73,3 +73,17 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/Cenas/Ambientes/Adm.unity
+Assets/Fontes/Jersey_25/Jersey25-Regular SDF.asset
+Assets/Scripts/Dialogue/DialogueManager.cs
+Assets/Scripts/Pontuação/GameData.cs
+Assets/Scripts/Pontuação/ProfileType.cs
+Assets/Scripts/Pontuação/Resultados.cs
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+Assets/Cenas/Ambientes/Adm.unity
+Assets/Fontes/Jersey_25/Jersey25-Regular SDF.asset
+Assets/Scripts/Dialogue/DialogueManager.cs
+Assets/Scripts/Pontuação/GameData.cs
+Assets/Scripts/Pontuação/ProfileType.cs
+Assets/Scripts/Pontuação/Resultados.cs
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset

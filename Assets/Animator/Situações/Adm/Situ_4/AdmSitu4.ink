@@ -1,8 +1,7 @@
 -> SituacaoADM_4_1
 
 === SituacaoADM_4_1 ===
-#portrait:default
-Na copa, uma chaleira elétrica acabou de ser utilizada e está quente sob a bancada. O que você faz?
+Na copa, uma chaleira elétrica acabou de ser utilizada e está quente sob a bancada. O que você faz? #portrait:default 
 
 *[Pego imediatamente sem verificar se está quente]
     Superfícies quentes podem causar queimaduras imediatas. Sempre utilize o cabo com cuidado. #portrait:PF_ADM_41
@@ -18,4 +17,5 @@ Na copa, uma chaleira elétrica acabou de ser utilizada e está quente sob a ban
     -> Fim
 
 === Fim ===
+Siga em frente para continuar. #portrait:default
 -> DONE
