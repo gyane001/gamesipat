@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &5 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5132572039386897853, guid: e45c2bc1a93d63f4598ce46b5a6841e8, type: 3}
+  m_PrefabInstance: {fileID: 6982477986143034868}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &58660279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,7 +151,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 866710805}
+    m_TransformParent: {fileID: 5}
     m_Modifications:
     - target: {fileID: 2233187457657289065, guid: e45c2bc1a93d63f4598ce46b5a6841e8, type: 3}
       propertyPath: m_Name
@@ -917,7 +922,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 420508036}
+    m_TransformParent: {fileID: 420508038}
     m_Modifications:
     - target: {fileID: 63475465354674248, guid: e45c2bc1a93d63f4598ce46b5a6841e8, type: 3}
       propertyPath: m_Color.b
@@ -1657,7 +1662,7 @@ Transform:
   m_LocalScale: {x: 116.68175, y: 1.4295455, z: 1.4295455}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 420508036}
+  m_Father: {fileID: 420508038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &319800551
 SpriteRenderer:
@@ -2111,16 +2116,11 @@ Transform:
   m_LocalScale: {x: 104.320496, y: 3.274087, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 866710805}
+  m_Father: {fileID: 5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &420508035 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2233187457657289065, guid: e45c2bc1a93d63f4598ce46b5a6841e8, type: 3}
-  m_PrefabInstance: {fileID: 1219951840}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &420508036 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5132572039386897853, guid: e45c2bc1a93d63f4598ce46b5a6841e8, type: 3}
   m_PrefabInstance: {fileID: 1219951840}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &420508037
@@ -2136,6 +2136,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxFactor: 0.3
+--- !u!4 &420508038 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5132572039386897853, guid: e45c2bc1a93d63f4598ce46b5a6841e8, type: 3}
+  m_PrefabInstance: {fileID: 1219951840}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &422072921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2406,7 +2411,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 866710805}
+    m_TransformParent: {fileID: 5}
     m_Modifications:
     - target: {fileID: 2233187457657289065, guid: e45c2bc1a93d63f4598ce46b5a6841e8, type: 3}
       propertyPath: m_Name
@@ -2668,7 +2673,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 420508036}
+    m_TransformParent: {fileID: 420508038}
     m_Modifications:
     - target: {fileID: 63475465354674248, guid: e45c2bc1a93d63f4598ce46b5a6841e8, type: 3}
       propertyPath: m_Color.b
@@ -3876,7 +3881,7 @@ Transform:
   m_LocalScale: {x: 0.96814424, y: 0.96814424, z: 0.96814424}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 420508036}
+  m_Father: {fileID: 420508038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &574499654
 MonoBehaviour:
@@ -4753,7 +4758,7 @@ Transform:
   m_LocalScale: {x: 0.96814424, y: 0.96814424, z: 0.96814424}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 420508036}
+  m_Father: {fileID: 420508038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &697829402
 MonoBehaviour:
@@ -5213,7 +5218,7 @@ Transform:
   m_LocalScale: {x: 0.96814424, y: 0.96814424, z: 0.96814424}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 420508036}
+  m_Father: {fileID: 420508038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &759639816
 MonoBehaviour:
@@ -5935,7 +5940,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 420508036}
+    m_TransformParent: {fileID: 420508038}
     m_Modifications:
     - target: {fileID: 63475465354674248, guid: e45c2bc1a93d63f4598ce46b5a6841e8, type: 3}
       propertyPath: m_Color.b
@@ -6645,11 +6650,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxFactor: 0.3
---- !u!4 &866710805 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5132572039386897853, guid: e45c2bc1a93d63f4598ce46b5a6841e8, type: 3}
-  m_PrefabInstance: {fileID: 6982477986143034868}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &869453582 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6321468172839495870, guid: e45c2bc1a93d63f4598ce46b5a6841e8, type: 3}
@@ -7395,7 +7395,7 @@ Transform:
   m_LocalScale: {x: 0.96814424, y: 0.96814424, z: 0.96814424}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 420508036}
+  m_Father: {fileID: 420508038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1090773128
 MonoBehaviour:
@@ -8602,7 +8602,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 420508036}
+    m_TransformParent: {fileID: 420508038}
     m_Modifications:
     - target: {fileID: 63475465354674248, guid: e45c2bc1a93d63f4598ce46b5a6841e8, type: 3}
       propertyPath: m_Color.b
@@ -9768,7 +9768,7 @@ Transform:
   m_LocalScale: {x: 0.96814424, y: 0.96814424, z: 0.96814424}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 420508036}
+  m_Father: {fileID: 420508038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1433528913
 MonoBehaviour:
@@ -11019,7 +11019,7 @@ Transform:
   m_LocalScale: {x: 0.96814424, y: 0.96814424, z: 0.96814424}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 420508036}
+  m_Father: {fileID: 420508038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1722297325
 MonoBehaviour:
@@ -12775,11 +12775,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 866710805}
+  - {fileID: 5}
   - {fileID: 836189136}
   - {fileID: 1856982317}
   - {fileID: 339940077}
-  - {fileID: 420508036}
+  - {fileID: 420508038}
   - {fileID: 755187914}
   - {fileID: 726516841}
   - {fileID: 780487013}
@@ -12804,7 +12804,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 866710805}
+    m_TransformParent: {fileID: 5}
     m_Modifications:
     - target: {fileID: 2233187457657289065, guid: e45c2bc1a93d63f4598ce46b5a6841e8, type: 3}
       propertyPath: m_Name
