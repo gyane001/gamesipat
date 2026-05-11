@@ -167,7 +167,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
- private void HandleTags(List<string> currentTags)
+    private void HandleTags(List<string> currentTags)
     {
         foreach (string tag in currentTags)
         {
@@ -175,10 +175,10 @@ public class DialogueManager : MonoBehaviour
 
             if (cleanTag == WIN_TAG)
             {
-                if (npcAtual != null)
+                if (npcAtual != null && !npcAtual.acertouQuiz) // o && evita contar duas vezes
                 {
                     npcAtual.acertouQuiz = true;
-                    // Debug.Log removido para limpar o console, mas pode descomentar
+                    GameData.totalWins++;
                 }
                 continue;
             }

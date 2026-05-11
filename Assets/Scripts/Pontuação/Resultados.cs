@@ -20,22 +20,22 @@ public class Resultados : MonoBehaviour
         textoContador.text = $"Você acertou {acertos} questões!";
 
         // Lógica de filtragem de perfil
-        if (acertos <= 0)
+        if (acertos <= 2)
         {
             textoTitulo.text = "Perfil: Vulnerável";
             textoDescricao.text = "Cuidado! Você não verifica a segurança do ambiente. Recomenda-se ser mais cauteloso.";
         }
-        else if (acertos == 1)
+        else if (acertos <= 5)
         {
             textoTitulo.text = "Perfil: Cauteloso";
-            textoDescricao.text = "Bom trabalho! Você conhece o básico de segurança, mas ainda tem pontos que podem ser explorados.";
+            textoDescricao.text = "Bom trabalho! Você conhece o básico de segurança, mas ainda tem pontos a melhorar.";
         }
-        else if ((acertos == 2))
+        else
         {
             textoTitulo.text = "Perfil: Especialista";
-            textoDescricao.text = "Parabéns! Você é um mestre da segurança. Suas escolhas protegem sua vida e de seus colegas.";
+            textoDescricao.text = "Parabéns! Você é um mestre da segurança. Suas escolhas protegem você e seus colegas.";
         }
-    }
+        }
 
     public void ReiniciarJogo()
     {
