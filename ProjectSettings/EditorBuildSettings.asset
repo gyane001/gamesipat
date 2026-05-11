@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cenas/Menu 2.unity
     guid: bf99f82bd2e26ce4698e2677de62f10e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Cenas/Instrucoes.unity
     guid: 4da5629c2bf312946aacc09249a74ccd
   - enabled: 1
@@ -23,9 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cenas/Ambientes/Adm.unity
     guid: 067dd56dff4e2e94384dde9705972efa
-  - enabled: 0
+  - enabled: 1
     path: Assets/Cenas/Ambientes/PF_2.unity
-    guid: ee12e4abd512c06438c2c9d59aa3c7af
+    guid: 1e596a5a54068ec40b976db7cefc8b93
   - enabled: 1
     path: Assets/Cenas/Ambientes/Fabrica.unity
     guid: fd3ed771375df4847b0db0bdb61e31e2
