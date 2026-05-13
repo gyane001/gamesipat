@@ -2188,7 +2188,6 @@ MonoBehaviour:
   typingSpeed: 0.04
   dialoguePanel: {fileID: 816869403}
   dialogueText: {fileID: 1735225815}
-  displayNameText: {fileID: 771745340}
   portraitAnimator: {fileID: 550745944}
   continueIcon: {fileID: 1881083752}
   choices:
@@ -2201,6 +2200,7 @@ MonoBehaviour:
   - {fileID: 547865746}
   - {fileID: 449973088}
   - {fileID: 974002411}
+  scoreTotal: 0
 --- !u!1001 &456601531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4372,7 +4372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 30208751092678528, guid: ba19b2b6cb046a841a21ea1ab192b0cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.3764124
+      value: -5.3728113
       objectReference: {fileID: 0}
     - target: {fileID: 30208751092678528, guid: ba19b2b6cb046a841a21ea1ab192b0cb, type: 3}
       propertyPath: m_LocalPosition.y
