@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/Cenas/Menu.unity
     guid: bf99f82bd2e26ce4698e2677de62f10e
   - enabled: 1
-    path: Assets/Cenas/Instrucoes.unity
+    path: Assets/Cenas/Objetivo.unity
     guid: 4da5629c2bf312946aacc09249a74ccd
+  - enabled: 1
+    path: Assets/Cenas/Como jogar.unity
+    guid: e2fceca4b53bc564f9801a2c20f2df43
   - enabled: 1
     path: Assets/Cenas/Portaria.unity
     guid: f0c5b41f527b67b41b6b70c4403a5831
