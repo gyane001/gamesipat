@@ -17,4 +17,5 @@ Você percebe um colega sem utilizar os EPIs obrigatórios. O que você faz?
     -> Fim
 
 === Fim ===
+Siga em frente para continuar. #portrait:default
 -> DONE

@@ -1,31 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1102 &-7900439880268725148
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: PF_FAB_2_2
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 95c048f222b302647a2511867e482d0b, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1107 &-7744957401557194161
 AnimatorStateMachine:
   serializedVersion: 6
@@ -50,9 +24,6 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 3160415836660566742}
     m_Position: {x: 900, y: 290, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -7900439880268725148}
-    m_Position: {x: 900, y: 340, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 9056479894011349096}
     m_Position: {x: 900, y: 390, z: 0}
@@ -83,6 +54,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -1804506579745762696}
     m_Position: {x: 1530, y: 390, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -5634834550148541855}
+    m_Position: {x: 900, y: 340, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: -6061707804388244075}
@@ -136,6 +110,32 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: f31b19e18a1055c46a1f3944a6ddc41c, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &-5634834550148541855
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PF_FAB_22
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 1a98aa29a55790e40a162efd7462e007, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

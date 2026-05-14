@@ -18,4 +18,5 @@ Durante o trajeto até o seu local de trabalho você chega a um cruzamento inter
     -> Fim
 
 === Fim ===
+Siga em frente para continuar. #portrait:default
 -> DONE

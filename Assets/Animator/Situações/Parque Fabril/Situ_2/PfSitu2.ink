@@ -20,4 +20,5 @@ Seu celular toca enquanto você caminha em direção ao seu local de trabalho. Q
     -> Fim
 
 === Fim ===
+Siga em frente para continuar. #portrait:default
 -> DONE

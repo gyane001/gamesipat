@@ -19,4 +19,5 @@ Você está chegando ao seu local de trabalho e uma obra está obstruindo a rota
     -> Fim
 
 === Fim ===
+Siga em frente para continuar. #portrait:default
 -> DONE

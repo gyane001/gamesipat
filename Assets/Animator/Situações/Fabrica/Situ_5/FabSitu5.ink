@@ -17,4 +17,5 @@ Você está caminhando em direção ao seu setor e percebe que está desatento p
     -> Fim
 
 === Fim ===
+Siga em frente para continuar. #portrait:default
 -> DONE

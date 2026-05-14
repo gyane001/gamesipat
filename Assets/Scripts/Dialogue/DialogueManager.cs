@@ -10,7 +10,7 @@ using Unity.VisualScripting;
 public class DialogueManager : MonoBehaviour
 {
     [Header("Parâmetros de Diálogo")]
-    [SerializeField] private float typingSpeed = 0.001f; // Aumentei um pouco, 0.001 é muito rápido
+    [SerializeField] private float typingSpeed = 0.01f; // Caso tente alterar a velocidade aqui e não funcione, verifique como esta o Inspector do "DialogueManager" na cena, pois pode ser que o valor esteja sendo sobrescrito por lá.
 
     // Variável que controla se o player pode avançar
     private bool canContinueToNextLine = false;
@@ -126,37 +126,28 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator DisplayLine(string line)
     {
-        // Limpa o texto anterior
         dialogueText.text = "";
-
-        // Esconde botões de escolha e ícone de continuar enquanto digita
         HideChoices();
         if (continueIcon != null) continueIcon.SetActive(false);
-
-        // Bloqueia o avanço
         canContinueToNextLine = false;
 
-        // Digita letra por letra
         foreach (char letter in line.ToCharArray())
         {
-            // Se o jogador clicar ENQUANTO digita, você pode implementar um "skip" aqui futuramente
             dialogueText.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
+
+            // Só espera se typingSpeed for maior que zero
+            if (typingSpeed > 0)
+                yield return new WaitForSeconds(typingSpeed);
+            else
+                yield return null; // Espera apenas 1 frame, sem delay de tempo
         }
 
-        // Texto terminou de digitar: Libera o avanço
         canContinueToNextLine = true;
 
-        // AGORA verificamos se existem escolhas para mostrar
         if (currentStory.currentChoices.Count > 0)
-        {
             DisplayChoices();
-        }
         else
-        {
-            // Se não tem escolhas, mostra a setinha para indicar que pode clicar para a próxima frase
             if (continueIcon != null) continueIcon.SetActive(true);
-        }
     }
 
     private void HideChoices()

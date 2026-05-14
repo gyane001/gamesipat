@@ -25,9 +25,6 @@ AnimatorStateMachine:
     m_State: {fileID: 8328596906186690261}
     m_Position: {x: 560, y: 240, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: -2006242303578250256}
-    m_Position: {x: 560, y: 290, z: 0}
-  - serializedVersion: 1
     m_State: {fileID: 102115143214920131}
     m_Position: {x: 560, y: 340, z: 0}
   - serializedVersion: 1
@@ -48,6 +45,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 8831925720630412553}
     m_Position: {x: 980, y: 340, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -2831272715856621004}
+    m_Position: {x: 560, y: 290, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: -6061707804388244075}
@@ -132,6 +132,32 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1102 &-2831272715856621004
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PF_SITU_22
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 68437bd0260646b47bf2a791699f4643, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &-2559389308208923925
 AnimatorState:
   serializedVersion: 6
@@ -153,32 +179,6 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 671ee8d1ec2ac7c49aef9b3526524aea, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &-2006242303578250256
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: PF_SITU_22
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 68437bd0260646b47bf2a791699f4643, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

@@ -18,4 +18,5 @@ Ao se direcionar ao seu posto de trabalho, você visualiza uma empilhadeira carr
     -> Fim
 
 === Fim ===
+Siga em frente para continuar. #portrait:default
 -> DONE

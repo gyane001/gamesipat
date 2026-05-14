@@ -12921,7 +12921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8513b1664bdcb7b4cbd871bfbeabcf93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingSpeed: 0.04
+  typingSpeed: 0.01
   dialoguePanel: {fileID: 1767219450}
   dialogueText: {fileID: 1010214428}
   portraitAnimator: {fileID: 0}
