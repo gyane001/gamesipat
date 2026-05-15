@@ -589,8 +589,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Qual ambiente voc\xEA quer jogar?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 163da1f7f63594643b51c8063221d879, type: 2}
-  m_sharedMaterial: {fileID: -3063213605611059862, guid: 163da1f7f63594643b51c8063221d879, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5bbd31d4090ee474d96e66dad2a3768d, type: 2}
+  m_sharedMaterial: {fileID: 8402567749774859120, guid: 5bbd31d4090ee474d96e66dad2a3768d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -863,7 +863,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 302, y: 351}
+  m_AnchoredPosition: {x: 326, y: 351}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &829642925
@@ -888,8 +888,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Pr\xE9dio Operacional"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 163da1f7f63594643b51c8063221d879, type: 2}
-  m_sharedMaterial: {fileID: -3063213605611059862, guid: 163da1f7f63594643b51c8063221d879, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5bbd31d4090ee474d96e66dad2a3768d, type: 2}
+  m_sharedMaterial: {fileID: 8402567749774859120, guid: 5bbd31d4090ee474d96e66dad2a3768d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -949,7 +949,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -76.741516, y: -3.7346191, z: 2.7738037, w: 0}
+  m_margin: {x: -107.11961, y: -3.7346191, z: 2.7738037, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1147,7 +1147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -303, y: 345}
+  m_AnchoredPosition: {x: -307, y: 345}
   m_SizeDelta: {x: 298.36, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1280330492
@@ -1172,8 +1172,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Pr\xE9dio Administrativo"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 163da1f7f63594643b51c8063221d879, type: 2}
-  m_sharedMaterial: {fileID: -3063213605611059862, guid: 163da1f7f63594643b51c8063221d879, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5bbd31d4090ee474d96e66dad2a3768d, type: 2}
+  m_sharedMaterial: {fileID: 8402567749774859120, guid: 5bbd31d4090ee474d96e66dad2a3768d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1233,7 +1233,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -31.08406, y: -3.7346191, z: -39.231033, w: 0}
+  m_margin: {x: -31.08406, y: -3.7346191, z: -63.099487, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
