@@ -111,37 +111,50 @@ private void OnTriggerExit2D(Collider2D collider)
         SceneManager.LoadScene(levelIndex);
     }
 
-    private void StartDialogue()
-    {
-        if (DialogueManager.GetInstance().dialogueIsPlaying) return;
+private void StartDialogue()
+{
+    if (DialogueManager.GetInstance().dialogueIsPlaying) return;
 
-        DialogueManager.GetInstance().EnterDialogueMode(inkJSON, this);
+    DialogueManager.GetInstance().EnterDialogueMode(inkJSON, this);
 
-        if (mobileButton != null) mobileButton.gameObject.SetActive(false);
-    }
+    if (mobileButton != null) mobileButton.gameObject.SetActive(false);
+
+    // Desativa o collider ao fim do diálogo para impedir re-interação
+    if (fazParteDoQuiz)
+        StartCoroutine(DesativarAposDialogo());
+}
+
+private IEnumerator DesativarAposDialogo()
+{
+    // Aguarda o diálogo terminar
+    yield return new WaitUntil(() => !DialogueManager.GetInstance().dialogueIsPlaying);
+
+    // Desativa o collider para bloquear futuras colisões/interações
+    Collider2D col = GetComponent<Collider2D>();
+    if (col != null) col.enabled = false;
+    gameObject.SetActive(false);
+
+    // Opcional: esconde o visual cue também
+    if (visualCue != null) visualCue.SetActive(false);
+}
 
     // --- FUNÇÃO PARA VERIFICAR TODOS OS NPCS ---
-    private bool VerificarTodosOsQuizzes()
+private bool VerificarTodosOsQuizzes()
+{
+    // "true" faz ele encontrar objetos desativados também
+    DialogueTrigger[] todosNPCs = FindObjectsOfType<DialogueTrigger>(true);
+
+    foreach (DialogueTrigger npc in todosNPCs)
     {
-        // Encontra TODOS os scripts DialogueTrigger ativos na cena
-        DialogueTrigger[] todosNPCs = FindObjectsOfType<DialogueTrigger>();
+        if (npc == this) continue;
 
-        foreach (DialogueTrigger npc in todosNPCs)
+        if (npc.fazParteDoQuiz && !npc.acertouQuiz)
         {
-            // Ignora a própria barreira para não dar erro nela mesma
-            if (npc == this) continue;
-
-            // Se o NPC faz parte do Quiz E ainda não foi vencido (acertouQuiz é false)
-            if (npc.fazParteDoQuiz && !npc.acertouQuiz)
-            {
-                Debug.Log("O jogador ainda não passou pelo NPC: " + npc.gameObject.name);
-                return false; // Retorna falso imediatamente, impedindo a passagem
-            }
-
-            if (npc.acertouQuiz) continue;
+            Debug.Log("O jogador ainda não passou pelo NPC: " + npc.gameObject.name);
+            return false;
         }
-
-        // Se o loop terminou e não encontrou ninguém "falso", então todos são verdadeiros
-        return true;
     }
+
+    return true;
+}
 }

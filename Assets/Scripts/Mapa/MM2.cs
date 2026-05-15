@@ -23,7 +23,12 @@ public class MM2 : MonoBehaviour
             {
                 SceneManager.LoadScene("Fabrica");
             }
-         
+
+
+        }
+        if (SceneManager.GetActiveScene().name == "Fabrica")
+        {
+            SceneManager.LoadScene("FimDeJogo");
         }
     }
 
