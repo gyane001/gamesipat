@@ -5,7 +5,7 @@
 Você está adentrando o prédio para iniciar sua jornada de trabalho. Antes de acessar a fábrica, é importante saber quais são os EPIs obrigatórios para circulação nesta área. Onde você busca essa informação?
 
 *[Peço orientação do líder ou técnico de segurança]
-    Essa fonte garante que você utilize os EPIs corretos para acesso à fábrica. #win #portrait:PF_FAB_11
+    Essa fonte garante que você utilize os EPIs corretos para acesso à fábrica. #win #portrait: PF_FAB_11
     A informação correta é o primeiro passo para trabalhar com segurança!
     -> Fim
 
