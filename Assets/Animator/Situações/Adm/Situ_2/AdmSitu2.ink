@@ -16,7 +16,7 @@ Quedas são acidentes comuns e totalmente evitáveis.
 
 *[Ignoro a mensagem e continuo segurando o corrimão]
     Escadas exigem atenção total e uso do corrimão.#portrait:PF_ADM_23 #win 
-Quedas são acidentes comuns e totalmente evitáveis. 
+Quedas são acidentes comuns que podem ser evitáveis. 
     -> Fim 
 
 === Fim ===
