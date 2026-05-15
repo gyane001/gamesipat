@@ -139,9 +139,9 @@ TextureImporter:
       name: "Bot\xF5es_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 709
-        width: 650
+        x: 184
+        y: 773
+        width: 656
         height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: "Bot\xF5es_1"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 535
-        width: 650
-        height: 150
+        x: 184
+        y: 598
+        width: 656
+        height: 154
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: "Bot\xF5es_2"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 356
-        width: 650
-        height: 150
+        x: 184
+        y: 416
+        width: 656
+        height: 154
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,9 +202,9 @@ TextureImporter:
       name: "Bot\xF5es_3"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 181
-        width: 650
+        x: 184
+        y: 245
+        width: 656
         height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -223,10 +223,10 @@ TextureImporter:
       name: "Bot\xF5es_4"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 650
-        height: 150
+        x: 184
+        y: 64
+        width: 656
+        height: 152
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
