@@ -34,5 +34,11 @@ public class MainMenu : MonoBehaviour
     {
         painelInstrucoes.SetActive(false); // Esconde o painel
     }
+
+    public void ReiniciarJogo()
+    {
+        GameData.totalWins = 0; // Resetamos os pontos para começar de novo
+        SceneManager.LoadScene("Menu"); // Substitua pelo nome da sua cena de menu
+    }
 }
 
