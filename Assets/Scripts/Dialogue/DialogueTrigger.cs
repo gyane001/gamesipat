@@ -6,9 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public Animator transition;
-    public float transitionTime = 1f;
-
     [Header("Visual Cue")]
     [SerializeField] private GameObject visualCue;
 
@@ -96,20 +93,6 @@ private void OnTriggerExit2D(Collider2D collider)
         // Nada mais necessário aqui, já que o botão foi removido
     }
 }
-
-    // --- COROUTINE MOVIDA PARA O LUGAR CERTO ---
-    IEnumerator LoadLevel(int levelIndex)
-    {
-        // Verifica se a transição existe para evitar erros
-        if (transition != null)
-        {
-            transition.SetTrigger("Start");
-        }
-
-        yield return new WaitForSeconds(transitionTime);
-
-        SceneManager.LoadScene(levelIndex);
-    }
 
 private void StartDialogue()
 {

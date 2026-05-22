@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3337761937680203729}
   - component: {fileID: 1415258255715434418}
-  - component: {fileID: 2544996312483075813}
   m_Layer: 0
   m_Name: SceneTransition
   m_TagString: Untagged
@@ -55,27 +54,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2544996312483075813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2358879706206979369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb5cd0644bbe0c84fbfd7ee97f8982d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transition: {fileID: 8957040559613310021}
-  transitionTime: 1
-  visualCue: {fileID: 0}
-  inkJSON: {fileID: 0}
-  isBarrier: 0
-  sceneToLoad: 
-  fazParteDoQuiz: 0
-  acertouQuiz: 0
-  mobileButton: {fileID: 0}
 --- !u!1 &3584429805025620595
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,8 +140,6 @@ GameObject:
   - component: {fileID: 6024097580185672957}
   - component: {fileID: 2713456920220716959}
   - component: {fileID: 6861010165023948107}
-  - component: {fileID: 3657398452700899699}
-  - component: {fileID: 8957040559613310021}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -237,41 +213,3 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
---- !u!114 &3657398452700899699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4297345616914375480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!95 &8957040559613310021
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4297345616914375480}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1cd3deafc2ce9944195f229a2622b0ed, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

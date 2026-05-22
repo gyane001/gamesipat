@@ -1,16 +1,30 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    // Variável para referenciar o Painel de Instruções
-    public GameObject painelInstrucoes;
+    [Header("Transição de Cena")]
+    public Animator transition;
+    public float transitionTime = 1f;
 
-    public void PlayGame()
-{
-    Debug.Log("Clique registrado: " + Time.realtimeSinceStartup);
-    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-}
+    public void PlayGame(string nomeDaFase)
+    {
+        Debug.Log("Clique registrado: " + Time.realtimeSinceStartup);
+        StartCoroutine(LoadLevel(nomeDaFase));
+    }
+
+    public void VoltarParaMenu()
+    {
+        Debug.Log("Game retornando ao menu!");
+        StartCoroutine(LoadLevel("Menu"));
+    }
+
+    public void ReiniciarJogo()
+    {
+        GameData.totalWins = 0;
+        StartCoroutine(LoadLevel("Menu"));
+    }
 
     public void QuitGame()
     {
@@ -18,28 +32,13 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-      public void VoltarParaMenu()
+    private IEnumerator LoadLevel(string nomeDaFase)
     {
-        Debug.Log("Game retornando ao menu!");
-            SceneManager.LoadScene("Menu");
-    }
+        if (transition != null)
+            transition.SetTrigger("Start");
 
-    // --- NOVAS FUNÇÕES ---
+        yield return new WaitForSeconds(transitionTime);
 
-    public void AbrirInstrucoes()
-    {
-        painelInstrucoes.SetActive(true); // Mostra o painel
-    }
-
-    public void FecharInstrucoes()
-    {
-        painelInstrucoes.SetActive(false); // Esconde o painel
-    }
-
-    public void ReiniciarJogo()
-    {
-        GameData.totalWins = 0; // Resetamos os pontos para começar de novo
-        SceneManager.LoadScene("Menu"); // Substitua pelo nome da sua cena de menu
+        SceneManager.LoadScene(nomeDaFase);
     }
 }
-
