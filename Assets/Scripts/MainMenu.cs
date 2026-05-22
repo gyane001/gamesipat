@@ -7,9 +7,10 @@ public class MainMenu : MonoBehaviour
     public GameObject painelInstrucoes;
 
     public void PlayGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+{
+    Debug.Log("Clique registrado: " + Time.realtimeSinceStartup);
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+}
 
     public void QuitGame()
     {
