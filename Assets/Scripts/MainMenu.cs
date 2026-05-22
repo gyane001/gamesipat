@@ -41,4 +41,21 @@ public class MainMenu : MonoBehaviour
 
         SceneManager.LoadScene(nomeDaFase);
     }
+<<<<<<< HEAD
 }
+=======
+
+    // --- NOVAS FUNÇÕES ---
+
+    public void AbrirInstrucoes()
+    {
+        painelInstrucoes.SetActive(true); // Mostra o painel
+    }
+
+    public void FecharInstrucoes()
+    {
+        painelInstrucoes.SetActive(false); // Esconde o painel
+    }
+}
+
+>>>>>>> parent of 777af7e (ajustado sistema de dialogos)
