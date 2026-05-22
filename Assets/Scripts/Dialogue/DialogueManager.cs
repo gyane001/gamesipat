@@ -10,9 +10,8 @@ using Unity.VisualScripting;
 public class DialogueManager : MonoBehaviour
 {
     [Header("Parâmetros de Diálogo")]
-    [SerializeField] private float typingSpeed = 0.01f; // Caso tente alterar a velocidade aqui e não funcione, verifique como esta o Inspector do "DialogueManager" na cena, pois pode ser que o valor esteja sendo sobrescrito por lá.
+    [SerializeField] private float typingSpeed = 0.01f;
 
-    // Variável que controla se o player pode avançar
     private bool canContinueToNextLine = false;
 
     [Header("UI do Diálogo")]
@@ -20,7 +19,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText;
 
     [SerializeField] private Animator portraitAnimator;
-    [SerializeField] private GameObject continueIcon; // A setinha que pisca
+    [SerializeField] private GameObject continueIcon;
 
     [Header("UI de Escolhas")]
     [SerializeField] private GameObject[] choices;
@@ -33,20 +32,29 @@ public class DialogueManager : MonoBehaviour
 
     private static DialogueManager instance;
 
-    // Constantes de Tags
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
-    // private const string LAYOUT_TAG = "layout"; // Removido pois não estava sendo usado no exemplo
     private const string WIN_TAG = "win";
     public int scoreTotal = 0;
 
     private void Awake()
     {
-        if (instance != null)
+        // CORREÇÃO: Se já existe uma instância de outra cena, destrói ESTA (a nova/duplicada)
+        // e mantém a antiga. MAS como cada cena tem seu próprio painel de UI,
+        // o correto é destruir a ANTIGA e ficar com a nova.
+        if (instance != null && instance != this)
         {
-            Debug.LogWarning("Mais de um Dialogue Manager encontrado!");
+            // A instância antiga pertence a uma cena destruída — descarta ela.
+            // Isso garante que sempre usamos o DialogueManager da cena atual,
+            // que tem referências válidas para o painel de UI correto.
+            Destroy(instance.gameObject);
         }
+
         instance = this;
+
+        // CORREÇÃO: Garante que dialogueIsPlaying começa como false na nova cena,
+        // independente do estado da cena anterior.
+        dialogueIsPlaying = false;
     }
 
     public static DialogueManager GetInstance()
@@ -57,25 +65,18 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         dialogueIsPlaying = false;
-        dialoguePanel.SetActive(false);
-
-        // Garante que o ícone e as escolhas começam escondidos
+        if (dialoguePanel != null) dialoguePanel.SetActive(false);
+        HideChoices();
         if (continueIcon != null) continueIcon.SetActive(false);
     }
 
     private void Update()
     {
-        // Se não está tocando, não faz nada
         if (!dialogueIsPlaying) return;
 
-        // A LÓGICA CORRIGIDA ESTÁ AQUI:
-        // Só entra se:
-        // 1. O texto terminou de digitar (canContinueToNextLine)
-        // 2. NÃO tem escolhas na tela (currentChoices.Count == 0)
-        // 3. O jogador apertou o botão (Teclado OU Mouse)
         if (canContinueToNextLine
             && currentStory.currentChoices.Count == 0
-            && (Input.GetButtonDown("Submit") || Input.GetMouseButtonDown(0))) // PARENTESES SÃO ESSENCIAIS AQUI
+            && (Input.GetButtonDown("Submit") || Input.GetMouseButtonDown(0)))
         {
             ContinueStory();
         }
@@ -85,11 +86,9 @@ public class DialogueManager : MonoBehaviour
     {
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
-        dialoguePanel.SetActive(true);
+        if (dialoguePanel != null) dialoguePanel.SetActive(true);
 
         npcAtual = npc;
-
-        // Reseta as tags para o padrão antes de começar
 
         if (portraitAnimator != null) portraitAnimator.Play("default");
 
@@ -99,47 +98,40 @@ public class DialogueManager : MonoBehaviour
     private void ExitDialogueMode()
     {
         dialogueIsPlaying = false;
-        dialoguePanel.SetActive(false);
-        dialogueText.text = "";
-
-
+        if (dialoguePanel != null) dialoguePanel.SetActive(false);
+        if (dialogueText != null) dialogueText.text = "";
         if (continueIcon != null) continueIcon.SetActive(false);
+        HideChoices();
     }
 
     private void ContinueStory()
     {
-        // Passo 1: Verifica se pode continuar
         if (currentStory.canContinue)
         {
-            // Começa a digitar a linha (A Corrotina cuida de exibir as escolhas depois)
             StartCoroutine(DisplayLine(currentStory.Continue()));
-
-            // Processa as tags (nome, retrato)
             HandleTags(currentStory.currentTags);
         }
         else
         {
-            // Se não pode continuar, sai do modo diálogo
             ExitDialogueMode();
         }
     }
 
     private IEnumerator DisplayLine(string line)
     {
-        dialogueText.text = "";
+        if (dialogueText != null) dialogueText.text = "";
         HideChoices();
         if (continueIcon != null) continueIcon.SetActive(false);
         canContinueToNextLine = false;
 
         foreach (char letter in line.ToCharArray())
         {
-            dialogueText.text += letter;
+            if (dialogueText != null) dialogueText.text += letter;
 
-            // Só espera se typingSpeed for maior que zero
             if (typingSpeed > 0)
                 yield return new WaitForSeconds(typingSpeed);
             else
-                yield return null; // Espera apenas 1 frame, sem delay de tempo
+                yield return null;
         }
 
         canContinueToNextLine = true;
@@ -166,7 +158,7 @@ public class DialogueManager : MonoBehaviour
 
             if (cleanTag == WIN_TAG)
             {
-                if (npcAtual != null && !npcAtual.acertouQuiz) // o && evita contar duas vezes
+                if (npcAtual != null && !npcAtual.acertouQuiz)
                 {
                     npcAtual.acertouQuiz = true;
                     GameData.totalWins++;
@@ -204,11 +196,8 @@ public class DialogueManager : MonoBehaviour
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
 
-            // Configura o botão
             int choiceIndex = index;
             Button btn = choices[index].GetComponent<Button>();
-
-            // É importante limpar listeners antigos
             btn.onClick.RemoveAllListeners();
             btn.onClick.AddListener(() => MakeChoice(choiceIndex));
 
@@ -220,7 +209,6 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator SelectFirstChoice()
     {
-        // Corrige bug do EventSystem mantendo seleção antiga
         EventSystem.current.SetSelectedGameObject(null);
         yield return new WaitForEndOfFrame();
         if (choices.Length > 0 && choices[0].activeSelf)
@@ -231,7 +219,6 @@ public class DialogueManager : MonoBehaviour
 
     public void MakeChoice(int choiceIndex)
     {
-        // Só permite escolher se o texto já terminou de digitar
         if (canContinueToNextLine)
         {
             currentStory.ChooseChoiceIndex(choiceIndex);

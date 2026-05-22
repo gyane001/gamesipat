@@ -23,7 +23,6 @@ public class DialogueTrigger : MonoBehaviour
     public bool fazParteDoQuiz = false;
 
     [Header("Status (Automático)")]
-    // Define se o player acertou a pergunta DESTE NPC específico
     public bool acertouQuiz = false;
 
     private bool playerInRange;
@@ -43,8 +42,12 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
-        // Se for barreira, não mostra o visual cue, pois a interação é automática via colisão
-        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying && !isBarrier)
+        // CORREÇÃO: Verifica se o DialogueManager existe antes de acessar
+        // (evita NullReferenceException durante a transição de cena)
+        var dm = DialogueManager.GetInstance();
+        if (dm == null) return;
+
+        if (playerInRange && !dm.dialogueIsPlaying && !isBarrier)
         {
             if (visualCue != null) visualCue.SetActive(true);
 
@@ -60,84 +63,83 @@ public class DialogueTrigger : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
-{
-    if (collider.CompareTag("Player"))
     {
-        playerInRange = true;
-
-        if (isBarrier)
+        if (collider.CompareTag("Player"))
         {
-            if (VerificarTodosOsQuizzes())
+            playerInRange = true;
+
+            if (isBarrier)
             {
-                SceneManager.LoadScene(sceneToLoad);
+                if (VerificarTodosOsQuizzes())
+                {
+                    SceneManager.LoadScene(sceneToLoad);
+                }
+                else
+                {
+                    StartDialogue();
+                }
             }
             else
             {
                 StartDialogue();
             }
         }
-        else
-        {
-            // ✅ Inicia o diálogo direto pela colisão, sem precisar do botão
-            StartDialogue();
-        }
-        
     }
-}
 
-private void OnTriggerExit2D(Collider2D collider)
-{
-    if (collider.CompareTag("Player"))
+    private void OnTriggerExit2D(Collider2D collider)
     {
-        playerInRange = false;
-        // Nada mais necessário aqui, já que o botão foi removido
-    }
-}
-
-private void StartDialogue()
-{
-    if (DialogueManager.GetInstance().dialogueIsPlaying) return;
-
-    DialogueManager.GetInstance().EnterDialogueMode(inkJSON, this);
-
-    if (mobileButton != null) mobileButton.gameObject.SetActive(false);
-
-    // Desativa o collider ao fim do diálogo para impedir re-interação
-    if (fazParteDoQuiz)
-        StartCoroutine(DesativarAposDialogo());
-}
-
-private IEnumerator DesativarAposDialogo()
-{
-    // Aguarda o diálogo terminar
-    yield return new WaitUntil(() => !DialogueManager.GetInstance().dialogueIsPlaying);
-
-    // Desativa o collider para bloquear futuras colisões/interações
-    Collider2D col = GetComponent<Collider2D>();
-    if (col != null) col.enabled = false;
-    gameObject.SetActive(false);
-
-    // Opcional: esconde o visual cue também
-    if (visualCue != null) visualCue.SetActive(false);
-}
-
-    // --- FUNÇÃO PARA VERIFICAR TODOS OS NPCS ---
-private bool VerificarTodosOsQuizzes()
-{
-    // "true" faz ele encontrar objetos desativados também
-    DialogueTrigger[] todosNPCs = FindObjectsOfType<DialogueTrigger>(true);
-
-    foreach (DialogueTrigger npc in todosNPCs)
-    {
-        if (npc == this) continue;
-
-        if (npc.fazParteDoQuiz && !npc.acertouQuiz)
+        if (collider.CompareTag("Player"))
         {
-            Debug.Log("O jogador ainda não passou pelo NPC: " + npc.gameObject.name);
-            return false;
+            playerInRange = false;
         }
     }
 
-    return true;
-}
+    private void StartDialogue()
+    {
+        // CORREÇÃO: Null check antes de usar o DialogueManager
+        var dm = DialogueManager.GetInstance();
+        if (dm == null) return;
+        if (dm.dialogueIsPlaying) return;
+
+        dm.EnterDialogueMode(inkJSON, this);
+
+        if (mobileButton != null) mobileButton.gameObject.SetActive(false);
+
+        if (fazParteDoQuiz)
+            StartCoroutine(DesativarAposDialogo());
+    }
+
+    private IEnumerator DesativarAposDialogo()
+    {
+        // CORREÇÃO: Null check dentro da condição do WaitUntil também
+        yield return new WaitUntil(() =>
+        {
+            var dm = DialogueManager.GetInstance();
+            return dm == null || !dm.dialogueIsPlaying;
+        });
+
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null) col.enabled = false;
+        gameObject.SetActive(false);
+
+        if (visualCue != null) visualCue.SetActive(false);
+    }
+
+    private bool VerificarTodosOsQuizzes()
+    {
+        DialogueTrigger[] todosNPCs = FindObjectsOfType<DialogueTrigger>(true);
+
+        foreach (DialogueTrigger npc in todosNPCs)
+        {
+            if (npc == this) continue;
+
+            if (npc.fazParteDoQuiz && !npc.acertouQuiz)
+            {
+                Debug.Log("O jogador ainda não passou pelo NPC: " + npc.gameObject.name);
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
