@@ -110,7 +110,11 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 1024
     resizeAlgorithm: 0
+<<<<<<< HEAD
     textureFormat: 50
+=======
+    textureFormat: 68
+>>>>>>> parent of 70ab547 (,)
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -123,7 +127,7 @@ TextureImporter:
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 50
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
