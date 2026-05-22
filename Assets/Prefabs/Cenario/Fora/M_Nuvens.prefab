@@ -64,10 +64,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nuvens_2
       objectReference: {fileID: 0}
-    - target: {fileID: 7391738117177382694, guid: 5c5f96b1f47890a4ab4c890a884b3145, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -86,10 +82,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3753389883985736398}
     m_Modifications:
-    - target: {fileID: 5818461328364224124, guid: e0c2cf9e35ec7624cabf93f30705420b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6117678748851990500, guid: e0c2cf9e35ec7624cabf93f30705420b, type: 3}
       propertyPath: m_Name
       value: Nuvens_1
@@ -164,10 +156,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3753389883985736398}
     m_Modifications:
-    - target: {fileID: 543696276741773105, guid: 80e5cf7dc4c4d8e4f8b8ec6fd79704f0, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 2561451977025066644, guid: 80e5cf7dc4c4d8e4f8b8ec6fd79704f0, type: 3}
       propertyPath: m_Name
       value: Nuvens_2 (1)
@@ -242,10 +230,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3753389883985736398}
     m_Modifications:
-    - target: {fileID: 543696276741773105, guid: 80e5cf7dc4c4d8e4f8b8ec6fd79704f0, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 2561451977025066644, guid: 80e5cf7dc4c4d8e4f8b8ec6fd79704f0, type: 3}
       propertyPath: m_Name
       value: Nuvens_2 (2)
@@ -376,10 +360,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7293559522290502147, guid: 7e444118d689adc4e96d87bb59c276fa, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -402,10 +382,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nuvens_0 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 2669298974541373900, guid: 3aa2a03465d76e24eac868800d6de7c0, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 8427197018310835285, guid: 3aa2a03465d76e24eac868800d6de7c0, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.88880974
@@ -476,10 +452,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3753389883985736398}
     m_Modifications:
-    - target: {fileID: 5818461328364224124, guid: e0c2cf9e35ec7624cabf93f30705420b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6117678748851990500, guid: e0c2cf9e35ec7624cabf93f30705420b, type: 3}
       propertyPath: m_Name
       value: Nuvens_1 (3)
@@ -554,10 +526,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3753389883985736398}
     m_Modifications:
-    - target: {fileID: 5818461328364224124, guid: e0c2cf9e35ec7624cabf93f30705420b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6117678748851990500, guid: e0c2cf9e35ec7624cabf93f30705420b, type: 3}
       propertyPath: m_Name
       value: Nuvens_1 (2)
@@ -636,10 +604,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Layer-6
       objectReference: {fileID: 0}
-    - target: {fileID: 2669298974541373900, guid: 3aa2a03465d76e24eac868800d6de7c0, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 8427197018310835285, guid: 3aa2a03465d76e24eac868800d6de7c0, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.88880974
@@ -766,10 +730,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7293559522290502147, guid: 7e444118d689adc4e96d87bb59c276fa, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -788,10 +748,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3753389883985736398}
     m_Modifications:
-    - target: {fileID: 5818461328364224124, guid: e0c2cf9e35ec7624cabf93f30705420b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6117678748851990500, guid: e0c2cf9e35ec7624cabf93f30705420b, type: 3}
       propertyPath: m_Name
       value: Nuvens_1 (1)
@@ -868,7 +824,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3374103657632264435, guid: 7e444118d689adc4e96d87bb59c276fa, type: 3}
       propertyPath: m_Name
-      value: M_Nuvens
+      value: Layer-6 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5454643312367040146, guid: 7e444118d689adc4e96d87bb59c276fa, type: 3}
       propertyPath: m_LocalScale.x
