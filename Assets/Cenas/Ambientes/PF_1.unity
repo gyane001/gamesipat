@@ -7003,7 +7003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBarrier: 1
   transition: {fileID: 952958079}
-  transitionTime: 0.5
+  transitionTime: 1
 --- !u!95 &952958079 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1415258255715434418, guid: 9562e12262646b4489cb3486fb950241, type: 3}

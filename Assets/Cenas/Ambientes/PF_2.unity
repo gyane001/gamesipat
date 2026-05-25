@@ -12140,7 +12140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBarrier: 1
-  transition: {fileID: 0}
+  transition: {fileID: 952958079}
   transitionTime: 1
 --- !u!114 &1952347115
 MonoBehaviour:
