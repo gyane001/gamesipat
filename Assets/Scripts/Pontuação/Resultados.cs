@@ -25,7 +25,7 @@ public class Resultados : MonoBehaviour
         {
             textoTitulo.text = "Perfil Ruim";
             textoDescricao.text = "Você demonstrou que ainda existem lacunas importantes no seu conhecimento e nas suas atitudes relacionadas à segurança. Isso não significa falta de capacidade, mas sim uma oportunidade clara de aprendizado e mudança de comportamento.";
-            textoDescricao.text += "\nDesafio: Reflita sobre suas respostas, busque aprender com os erros e transforme conhecimento em prática. Segurança é um hábito que pode (e deve) ser construído.";
+            textoDescricao.text += "\n\n Desafio: Reflita sobre suas respostas, busque aprender com os erros e transforme conhecimento em prática. Segurança é um hábito que pode (e deve) ser construído.";
         }
 
         else if (acertos <= 8)
