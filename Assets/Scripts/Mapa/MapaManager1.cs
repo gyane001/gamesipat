@@ -28,13 +28,13 @@ public class MapaManager_1 : MonoBehaviour
             yield return new WaitForSeconds(transitionTime);
         }
 
-        if (SceneManager.GetActiveScene().name == "Adm")
-        {
-            SceneManager.LoadScene("FimDeJogo");
-        }
-        else
+        if (SceneManager.GetActiveScene().name == "PF_1")
         {
             SceneManager.LoadScene("Adm");
+        }
+        else if (SceneManager.GetActiveScene().name == "Adm")
+        {
+            SceneManager.LoadScene("FimDeJogo");
         }
     }
 }

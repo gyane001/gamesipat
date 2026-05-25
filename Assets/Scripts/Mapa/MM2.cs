@@ -30,12 +30,17 @@ public class MM2 : MonoBehaviour
             yield return new WaitForSeconds(transitionTime);
         }
 
-        if (SceneManager.GetActiveScene().name == "Fabrica")
+        if (SceneManager.GetActiveScene().name == "PF_2")
         {
-            transition.SetTrigger("Start");
-            yield return new WaitForSeconds(transitionTime);
+            SceneManager.LoadScene("Adm");
+
+           // transition.SetTrigger("Start");
+            //yield return new WaitForSeconds(transitionTime);
         }
-        SceneManager.LoadScene("FimDeJogo");
+          if (SceneManager.GetActiveScene().name == "Adm")
+        {
+            SceneManager.LoadScene("FimDeJogo");
+        }
     }
 
 }
