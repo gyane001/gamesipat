@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MapaManager_1 : MonoBehaviour
 {
-
     public bool isBarrier = false;
+    [Header("Transição de Cena")]
+    public Animator transition;
+    public float transitionTime = 1f;
 
     public void CarregarFase(string nomeDaFase)
     {
@@ -15,19 +17,24 @@ public class MapaManager_1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Player"))
+        StartCoroutine(LoadSceneWithTransition());
+    }
+
+    private IEnumerator LoadSceneWithTransition()
+    {
+        if (transition != null)
         {
-
-            // --- LÓGICA DA BARREIRA ATUALIZADA ---
-            if (isBarrier)
-            {
-                SceneManager.LoadScene("Adm");
-            }
-
+            transition.SetTrigger("Start");
+            yield return new WaitForSeconds(transitionTime);
         }
+
         if (SceneManager.GetActiveScene().name == "Adm")
         {
             SceneManager.LoadScene("FimDeJogo");
+        }
+        else
+        {
+            SceneManager.LoadScene("Adm");
         }
     }
 }

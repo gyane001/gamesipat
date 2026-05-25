@@ -18,31 +18,30 @@ public class Resultados : MonoBehaviour
     public void ExibirResultado()
     {
         int acertos = GameData.totalWins;
-        textoContador.text = $"Você acertou {acertos} questões!";
+        textoContador.text = $"Você acertou {acertos} questões de 9!";
 
         // Lógica de filtragem de perfil
         if (acertos <= 3)
         {
             textoTitulo.text = "Perfil Ruim";
-            textoDescricao.text = "Ainda existem pontos importantes para desenvolver no conhecimento e nas atitudes de segurança. Reforce os conceitos, mantenha a atenção no dia a dia e transforme aprendizado em prática.";
-            textoDescricao.text += "\n\n\nDesafio: Aprenda com os erros e faça da segurança um hábito diário";
+            textoDescricao.text = "Você demonstrou que ainda existem lacunas importantes no seu conhecimento e nas suas atitudes relacionadas à segurança. Isso não significa falta de capacidade, mas sim uma oportunidade clara de aprendizado e mudança de comportamento.";
+            textoDescricao.text += "\nDesafio: Reflita sobre suas respostas, busque aprender com os erros e transforme conhecimento em prática. Segurança é um hábito que pode (e deve) ser construído.";
         }
 
         else if (acertos <= 8)
         {
             textoTitulo.text = "Perfil Bom";
-            textoDescricao.text = "Demonstrou bom conhecimento e consciência em segurança, com atitudes responsáveis no dia a dia. Continue atento aos detalhes, reforçando boas práticas e evoluindo continuamente.";
-            textoDescricao.text += "\n\n\nDesafio: Mantenha sua postura segura e seja exemplo para os colegas.";
+            textoDescricao.text = "Você demonstrou um bom nível de conhecimento e consciência em segurança, aplicando corretamente muitos conceitos importantes no seu dia a dia. Suas escolhas indicam responsabilidade e atenção aos riscos.";
+            textoDescricao.text += "\n\n\nDesafio: Continue praticando e seja um exemplo positivo para quem está ao seu redor. \nSegurança é um compromisso contínuo.";
         }
         else
         {
             textoTitulo.text = "Perfil Especialista";
-            textoDescricao.text = "Parabéns! Você acertou todas as respostas e demonstrou excelente conhecimento, responsabilidade e atitude em segurança. Suas escolhas mostram consciência dos riscos e compromisso com o cuidado próprio e coletivo.";
-            textoDescricao.text += "\n\nDesafio: Continue sendo exemplo e incentivando a cultura de segurança no dia a dia.";
+            textoDescricao.text = "Parabéns! Você acertou todas as respostas. Com isso você apresentou um nível superior de conhecimento, atitude e responsabilidade em segurança. Suas respostas mostram que você entende os riscos, age preventivamente e valoriza o cuidado com sua própria vida e com a dos outros.";
+            textoDescricao.text += "\n\nDesafio: Continue sendo referência, compartilhe boas práticas e incentive a cultura de segurança. Quem cuida bem, inspira outros a cuidarem também.";
         }
     }
-
-
+    
     public void ReiniciarJogo()
     {
         GameData.totalWins = 0; // Resetamos os pontos para começar de novo

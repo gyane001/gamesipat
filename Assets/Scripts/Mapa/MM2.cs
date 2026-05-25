@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MM2 : MonoBehaviour
 {
-
     public bool isBarrier = false;
+
+    [Header("Transição de Cena")]
+    public Animator transition;
+    public float transitionTime = 1f;
 
     public void CarregarFase(string nomeDaFase)
     {
@@ -15,24 +18,24 @@ public class MM2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Player"))
+        StartCoroutine(LoadSceneWithTransition());
+    }
+
+    private IEnumerator LoadSceneWithTransition()
+    {
+
+        if (transition != null)
         {
-
-            // --- LÓGICA DA BARREIRA ATUALIZADA ---
-            if (isBarrier)
-            {
-                SceneManager.LoadScene("Fabrica");
-            }
-
-
+            transition.SetTrigger("Start");
+            yield return new WaitForSeconds(transitionTime);
         }
+
         if (SceneManager.GetActiveScene().name == "Fabrica")
         {
-            SceneManager.LoadScene("FimDeJogo");
+            transition.SetTrigger("Start");
+            yield return new WaitForSeconds(transitionTime);
         }
+        SceneManager.LoadScene("FimDeJogo");
     }
 
 }
-
-
-

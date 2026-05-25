@@ -7,7 +7,7 @@ Na copa, uma chaleira elétrica acabou de ser utilizada e está quente sob a ban
     Superfícies quentes podem causar queimaduras imediatas. Sempre utilize o cabo com cuidado. #portrait:PF_ADM_41
     -> Fim
 
-*[Verifico com cuidado e utilizo pelo cabo]
+*[Verifico com cuidado e uso a alça isolada]
     Objetos aquecidos devem ser manuseados sempre pelo local apropriado. #win #portrait:PF_ADM_42
     Pequenos cuidados evitam queimaduras.
     -> Fim

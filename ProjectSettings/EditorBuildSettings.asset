@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Cenas/Objetivo.unity
     guid: 4da5629c2bf312946aacc09249a74ccd
   - enabled: 1
-    path: Assets/Cenas/Como jogar.unity
+    path: Assets/Cenas/ComoJogar.unity
     guid: e2fceca4b53bc564f9801a2c20f2df43
   - enabled: 1
     path: Assets/Cenas/Portaria.unity
@@ -28,7 +28,7 @@ EditorBuildSettings:
     guid: 067dd56dff4e2e94384dde9705972efa
   - enabled: 1
     path: Assets/Cenas/Ambientes/PF_2.unity
-    guid: 1e596a5a54068ec40b976db7cefc8b93
+    guid: 1f787d7a68a8db04f8b238d96a9d9381
   - enabled: 1
     path: Assets/Cenas/Ambientes/Fabrica.unity
     guid: fd3ed771375df4847b0db0bdb61e31e2

@@ -13,7 +13,7 @@ Durante o trajeto até o seu local de trabalho você chega a um cruzamento inter
     Perigoso! Mesmo estando na faixa, é essencial fazer contato visual e garantir a parada total do veículo. Contamos com você! #portrait:PF_SITU_12
     -> Fim
 
-*[Atravesso fora da faixa para, chegar mais rápido.]
+*[Atravesso fora da faixa para chegar mais rápido.]
     Perigoso! Atravessar fora da faixa reduz a visibilidade e aumenta o risco de atropelamento. Aguarde a parada dos veículos, mantenha contato visual com o motorista e atravesse na faixa de pedestres. #portrait:PF_SITU_13
     -> Fim
 

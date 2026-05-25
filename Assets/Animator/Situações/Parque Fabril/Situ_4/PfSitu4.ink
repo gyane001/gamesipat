@@ -13,7 +13,7 @@ Você está em deslocamento e um colega do seu turno passa correndo por você pa
     -> Fim
 
 *[Oriento meu colega que correr pode causar acidentes]
-    Parabéns, com essa decisão você praticou o 2º pilar do cuidado ativo “eu cuido do meu colega”. #win #portrait:PF_SITU_43 #win
+    Parabéns, com essa decisão você praticou o segundo pilar do cuidado ativo “eu cuido do meu colega”. #win #portrait:PF_SITU_43 #win
     Além disso, cuide de você, permaneça caminhando normalmente, mantendo atenção aos riscos do trajeto.
     -> Fim
     

@@ -7054,6 +7054,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBarrier: 1
+  transition: {fileID: 952958079}
+  transitionTime: 1
+--- !u!95 &952958079 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1415258255715434418, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+  m_PrefabInstance: {fileID: 952958076}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &994558134
 PrefabInstance:
   m_ObjectHideFlags: 0

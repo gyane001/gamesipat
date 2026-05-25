@@ -206,6 +206,87 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &85532435
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2358879706206979369, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: m_Name
+      value: SceneTransition
+      objectReference: {fileID: 0}
+    - target: {fileID: 2358879706206979369, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2544996312483075813, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: sceneToLoad
+      value: FimDeJogo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2713456920220716959, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1634515450}
+    - target: {fileID: 2713456920220716959, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337761937680203729, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 27.890327
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337761937680203729, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.692194
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337761937680203729, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -31.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337761937680203729, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337761937680203729, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337761937680203729, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337761937680203729, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337761937680203729, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337761937680203729, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3337761937680203729, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3657398452700899699, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297345616914375480, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9562e12262646b4489cb3486fb950241, type: 3}
 --- !u!1 &177442679
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,7 +515,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nomeDaCena: PF_1
-  caminhoEscolhido: 1
 --- !u!114 &388957710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,7 +561,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 388957709}
         m_TargetAssemblyTypeName: BotaoMapa, Assembly-CSharp
-        m_MethodName: IrParaProximaFase
+        m_MethodName: IrCaminho1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1038,6 +1118,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995320359}
   m_CullTransparentMesh: 1
+--- !u!95 &998746679 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1415258255715434418, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+  m_PrefabInstance: {fileID: 85532435}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1273207675
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,6 +1716,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1938370482}
+  - component: {fileID: 1938370483}
   m_Layer: 5
   m_Name: GameObject
   m_TagString: Untagged
@@ -1657,6 +1743,20 @@ RectTransform:
   m_AnchoredPosition: {x: 200, y: -89.99996}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1938370483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938370481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d409902b6a7cc245aeda3b6b677d941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transition: {fileID: 998746679}
+  transitionTime: 0.5
 --- !u!1 &2077938944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,7 +1809,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nomeDaCena: PF_2
-  caminhoEscolhido: 2
 --- !u!114 &2077938947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1756,7 +1855,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2077938946}
         m_TargetAssemblyTypeName: BotaoMapa, Assembly-CSharp
-        m_MethodName: IrParaProximaFase
+        m_MethodName: IrCaminho2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1810,3 +1909,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 1634515451}
   - {fileID: 1560311259}
+  - {fileID: 85532435}

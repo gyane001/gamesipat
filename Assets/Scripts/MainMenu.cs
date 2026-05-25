@@ -11,34 +11,47 @@ public class MainMenu : MonoBehaviour
     public void PlayGame(string nomeDaFase)
     {
         Debug.Log("Clique registrado: " + Time.realtimeSinceStartup);
-        StartCoroutine(LoadLevel(nomeDaFase));
+        StartCoroutine(CarregarCena(nomeDaFase));
     }
 
     public void VoltarParaMenu()
     {
         Debug.Log("Game retornando ao menu!");
-        StartCoroutine(LoadLevel("Menu"));
+        GameData.totalWins = 0;
+        StartCoroutine(CarregarCena("Menu"));
     }
 
     public void ReiniciarJogo()
     {
         GameData.totalWins = 0;
-        StartCoroutine(LoadLevel("Menu"));
+        StartCoroutine(CarregarCena("Menu"));
     }
 
     public void QuitGame()
     {
         Debug.Log("O jogo fechou!");
-        Application.Quit();
+        StartCoroutine(SairDoJogo());
     }
 
-    private IEnumerator LoadLevel(string nomeDaFase)
+    private IEnumerator CarregarCena(string nomeDaFase)
     {
         if (transition != null)
+        {
             transition.SetTrigger("Start");
-
-        yield return new WaitForSeconds(transitionTime);
+            yield return new WaitForSeconds(transitionTime);
+        }
 
         SceneManager.LoadScene(nomeDaFase);
+    }
+
+    private IEnumerator SairDoJogo()
+    {
+        if (transition != null)
+        {
+            transition.SetTrigger("Start");
+            yield return new WaitForSeconds(transitionTime);
+        }
+
+        Application.Quit();
     }
 }
