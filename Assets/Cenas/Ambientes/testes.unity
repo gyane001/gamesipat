@@ -3981,10 +3981,10 @@ RectTransform:
   - {fileID: 1655016608}
   m_Father: {fileID: 1621540110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 94.727264}
-  m_SizeDelta: {x: -56.6125, y: -228.9099}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 97.6}
+  m_SizeDelta: {x: 858.1761, y: 271.0901}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &597769532
 MonoBehaviour:
@@ -6917,7 +6917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2358879706206979369, guid: 9562e12262646b4489cb3486fb950241, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2544996312483075813, guid: 9562e12262646b4489cb3486fb950241, type: 3}
       propertyPath: m_Enabled
@@ -6998,6 +6998,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBarrier: 1
+  transition: {fileID: 0}
+  transitionTime: 1
 --- !u!1 &988390498
 GameObject:
   m_ObjectHideFlags: 0
@@ -7526,8 +7528,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 1655016608}
     m_Modifications:
     - target: {fileID: 401329321482563006, guid: a5447b4f956a498419cf42fcb55b8e61, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 401329321482563006, guid: a5447b4f956a498419cf42fcb55b8e61, type: 3}
       propertyPath: m_SizeDelta.y
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 401329321482563006, guid: a5447b4f956a498419cf42fcb55b8e61, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1387749652628019864, guid: a5447b4f956a498419cf42fcb55b8e61, type: 3}
       propertyPath: m_Name
@@ -7543,7 +7553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3935021385049623849, guid: a5447b4f956a498419cf42fcb55b8e61, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3935021385049623849, guid: a5447b4f956a498419cf42fcb55b8e61, type: 3}
       propertyPath: m_FontData.m_FontStyle
@@ -9612,7 +9622,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 2.132919, w: 0}
+  m_margin: {x: 0, y: 0, z: 2.132919, w: -5.1849003}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -10997,10 +11007,10 @@ RectTransform:
   - {fileID: 1908524794}
   m_Father: {fileID: 597769531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: -39.999996, y: 140}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -52.7}
+  m_SizeDelta: {x: 810, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1655016609
 MonoBehaviour:
@@ -11802,8 +11812,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 1655016608}
     m_Modifications:
     - target: {fileID: 401329321482563006, guid: a5447b4f956a498419cf42fcb55b8e61, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 401329321482563006, guid: a5447b4f956a498419cf42fcb55b8e61, type: 3}
       propertyPath: m_SizeDelta.y
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 401329321482563006, guid: a5447b4f956a498419cf42fcb55b8e61, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1387749652628019864, guid: a5447b4f956a498419cf42fcb55b8e61, type: 3}
       propertyPath: m_Name
@@ -11823,7 +11841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3935021385049623849, guid: a5447b4f956a498419cf42fcb55b8e61, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3935021385049623849, guid: a5447b4f956a498419cf42fcb55b8e61, type: 3}
       propertyPath: m_FontData.m_FontStyle
@@ -12125,6 +12143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBarrier: 1
+  transition: {fileID: 0}
+  transitionTime: 1
 --- !u!61 &1938851666
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12287,7 +12307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3935021385049623849, guid: a5447b4f956a498419cf42fcb55b8e61, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3935021385049623849, guid: a5447b4f956a498419cf42fcb55b8e61, type: 3}
       propertyPath: m_FontData.m_FontStyle
