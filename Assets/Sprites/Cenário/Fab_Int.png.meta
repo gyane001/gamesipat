@@ -141,7 +141,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1549
+        width: 1553
         height: 1058
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -160,9 +160,9 @@ TextureImporter:
       name: Fab_Int_1
       rect:
         serializedVersion: 2
-        x: 1593
+        x: 1590
         y: 0
-        width: 1553
+        width: 1559
         height: 1058
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -181,9 +181,9 @@ TextureImporter:
       name: Fab_Int_2
       rect:
         serializedVersion: 2
-        x: 3190
+        x: 3186
         y: 0
-        width: 1549
+        width: 1553
         height: 1058
       alignment: 0
       pivot: {x: 0, y: 0}

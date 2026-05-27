@@ -22,18 +22,34 @@ public class MapaManager_1 : MonoBehaviour
 
     private IEnumerator LoadSceneWithTransition()
     {
-        if (transition != null)
+       
+
+        if (SceneManager.GetActiveScene().name == "PF_1")
+        {
+             if (transition != null)
         {
             transition.SetTrigger("Start");
             yield return new WaitForSeconds(transitionTime);
         }
-
-        if (SceneManager.GetActiveScene().name == "PF_1")
-        {
             SceneManager.LoadScene("Adm");
         }
         else if (SceneManager.GetActiveScene().name == "Adm")
         {
+             if (transition != null)
+        {
+            transition.SetTrigger("Start");
+            yield return new WaitForSeconds(transitionTime);
+        }
+            SceneManager.LoadScene("Adm 1");
+        }
+
+         else if (SceneManager.GetActiveScene().name == "Adm")
+        {
+             if (transition != null)
+        {
+            transition.SetTrigger("Start");
+            yield return new WaitForSeconds(transitionTime);
+        }
             SceneManager.LoadScene("FimDeJogo");
         }
     }

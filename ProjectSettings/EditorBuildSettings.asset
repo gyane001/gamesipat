@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Cenas/Ambientes/Adm.unity
     guid: 067dd56dff4e2e94384dde9705972efa
   - enabled: 1
+    path: Assets/Cenas/Ambientes/Adm 1.unity
+    guid: edca02ca1e2803045bee6b86fbd67fce
+  - enabled: 1
     path: Assets/Cenas/Ambientes/PF_2.unity
     guid: 1f787d7a68a8db04f8b238d96a9d9381
   - enabled: 1
