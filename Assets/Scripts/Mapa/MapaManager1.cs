@@ -43,7 +43,7 @@ public class MapaManager_1 : MonoBehaviour
             SceneManager.LoadScene("Adm 1");
         }
 
-         else if (SceneManager.GetActiveScene().name == "Adm")
+         else if (SceneManager.GetActiveScene().name == "Adm1")
         {
              if (transition != null)
         {
