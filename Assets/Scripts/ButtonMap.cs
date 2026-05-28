@@ -6,8 +6,7 @@ public class BotaoMapa : MonoBehaviour
 {
     [Header("Configuração")]
     public string nomeDaCena;
-    //  public int caminhoEscolhido = 0; // 1 para caminho Adm, 2 para caminho Fabrica
-    
+    [Header("Transição de Cena")]
     public Animator transition;
     public float transitionTime = 1f;
 
@@ -19,8 +18,26 @@ public class BotaoMapa : MonoBehaviour
             btn.onClick.AddListener(TrocarCena);
         }
     }
-    
-public void TrocarCena()
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        // Corrigido: adicionado os parênteses ()
+        StartCoroutine(IrParaMapas());
+    }
+
+    private IEnumerator IrParaMapas()
+    {
+        // 1. Faz a transição de cena e espera
+        if (transition != null)
+        {
+            transition.SetTrigger("Start");
+            yield return new WaitForSeconds(transitionTime);
+        }
+        SceneManager.LoadScene(nomeDaCena);
+    }
+
+
+    public void TrocarCena()
     {
         // Inicia a corrotina
         StartCoroutine(RotinaTrocarCena());
@@ -33,7 +50,7 @@ public void TrocarCena()
             transition.SetTrigger("Start");
             yield return new WaitForSeconds(transitionTime);
         }
-        
+
         SceneManager.LoadScene(nomeDaCena);
     }
 }

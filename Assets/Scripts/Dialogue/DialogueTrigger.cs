@@ -6,9 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    [Header("Visual Cue")]
-    [SerializeField] private GameObject visualCue;
-
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
 
@@ -26,19 +23,6 @@ public class DialogueTrigger : MonoBehaviour
     public bool acertouQuiz = false;
 
     private bool playerInRange;
-    public Button mobileButton;
-
-    private void Awake()
-    {
-        playerInRange = false;
-        if (visualCue != null) visualCue.SetActive(false);
-
-        GameObject btnObj = GameObject.Find("BotaoInteragirMobile");
-        if (btnObj != null)
-        {
-            mobileButton = btnObj.GetComponent<Button>();
-        }
-    }
 
     private void Update()
     {
@@ -49,17 +33,7 @@ public class DialogueTrigger : MonoBehaviour
 
         if (playerInRange && !dm.dialogueIsPlaying && !isBarrier)
         {
-            if (visualCue != null) visualCue.SetActive(true);
-
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                StartDialogue();
-            }
-        }
-        else
-        {
-            if (visualCue != null) visualCue.SetActive(false);
-        }
+    }
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -103,8 +77,6 @@ public class DialogueTrigger : MonoBehaviour
 
         dm.EnterDialogueMode(inkJSON, this);
 
-        if (mobileButton != null) mobileButton.gameObject.SetActive(false);
-
         if (fazParteDoQuiz)
             StartCoroutine(DesativarAposDialogo());
     }
@@ -122,7 +94,6 @@ public class DialogueTrigger : MonoBehaviour
         if (col != null) col.enabled = false;
         gameObject.SetActive(false);
 
-        if (visualCue != null) visualCue.SetActive(false);
     }
 
     private bool VerificarTodosOsQuizzes()
