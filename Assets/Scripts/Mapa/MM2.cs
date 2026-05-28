@@ -32,14 +32,27 @@ public class MM2 : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "PF_2")
         {
+            if (transition != null)
+            {
+                transition.SetTrigger("Start");
+                yield return new WaitForSeconds(transitionTime);
+
+            }
             SceneManager.LoadScene("Fabrica");
 
-           // transition.SetTrigger("Start");
+            // transition.SetTrigger("Start");
             //yield return new WaitForSeconds(transitionTime);
         }
-          if (SceneManager.GetActiveScene().name == "Fabrica")
+        if (SceneManager.GetActiveScene().name == "Fabrica")
         {
+            if (transition != null)
+            {
+                transition.SetTrigger("Start");
+                yield return new WaitForSeconds(transitionTime);
+
+            }
             SceneManager.LoadScene("FimDeJogo");
+
         }
     }
 
