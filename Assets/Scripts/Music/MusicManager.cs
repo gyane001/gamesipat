@@ -46,15 +46,15 @@ public class MusicManager : MonoBehaviour
         // (Isso impede que a música reinicie do zero ao trocar de cena)
         if (audioSource.clip == novaMusica && audioSource.isPlaying)
         {
-            return; 
+            return;
         }
 
         // Se for uma música diferente, troca e toca
         audioSource.Stop();
         audioSource.clip = novaMusica;
-        
+
         // Reforça o loop na hora do play
-        audioSource.loop = true; 
+        audioSource.loop = true;
         audioSource.Play();
     }
 }

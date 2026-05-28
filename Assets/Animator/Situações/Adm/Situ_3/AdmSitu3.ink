@@ -4,14 +4,14 @@
 #portrait:default
 Uma gaveta de arquivo está aberta parcialmente. O que você faz?
 
-*[Desvio rapidamente]
-    Cuidado! Você ainda pode se machucar. #portrait:PF_ADM_31
-    Segurança é atitude preventiva, não reação após o acidente.
-    -> Fim
-
 *[Fecho a gaveta]
     Eliminar o risco protege você e seus colegas. #win #portrait:PF_ADM_32
     Segurança é atitude preventiva.
+    -> Fim
+
+*[Desvio rapidamente]
+    Cuidado! Você ainda pode se machucar. #portrait:PF_ADM_31
+    Segurança é atitude preventiva, não reação após o acidente.
     -> Fim
 
 *[Deixar como está]

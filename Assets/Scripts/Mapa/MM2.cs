@@ -11,49 +11,31 @@ public class MM2 : MonoBehaviour
     public Animator transition;
     public float transitionTime = 1f;
 
-    public void CarregarFase(string nomeDaFase)
-    {
-        SceneManager.LoadScene(nomeDaFase);
-    }
-
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        StartCoroutine(LoadSceneWithTransition());
+        // Corrigido: adicionado os parênteses ()
+        StartCoroutine(RotinaTrocarCaminhos());
     }
 
-    private IEnumerator LoadSceneWithTransition()
+    private IEnumerator RotinaTrocarCaminhos()
     {
-
+        // 1. Faz a transição de cena e espera
         if (transition != null)
         {
             transition.SetTrigger("Start");
             yield return new WaitForSeconds(transitionTime);
         }
 
-        if (SceneManager.GetActiveScene().name == "PF_2")
-        {
-            if (transition != null)
-            {
-                transition.SetTrigger("Start");
-                yield return new WaitForSeconds(transitionTime);
+        // 2. Checa o nome da cena e carrega a próxima
+        string cenaAtual = SceneManager.GetActiveScene().name;
 
-            }
+        if (cenaAtual == "PF_2")
+        {
             SceneManager.LoadScene("Fabrica");
-
-            // transition.SetTrigger("Start");
-            //yield return new WaitForSeconds(transitionTime);
         }
-        if (SceneManager.GetActiveScene().name == "Fabrica")
+        else if (cenaAtual == "Fabrica")
         {
-            if (transition != null)
-            {
-                transition.SetTrigger("Start");
-                yield return new WaitForSeconds(transitionTime);
-
-            }
             SceneManager.LoadScene("FimDeJogo");
-
         }
     }
-
 }

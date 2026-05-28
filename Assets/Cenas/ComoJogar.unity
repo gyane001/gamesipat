@@ -234,6 +234,14 @@ PrefabInstance:
       propertyPath: sceneToLoad
       value: FimDeJogo
       objectReference: {fileID: 0}
+    - target: {fileID: 2713456920220716959, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 100347972}
+    - target: {fileID: 2713456920220716959, guid: 9562e12262646b4489cb3486fb950241, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3337761937680203729, guid: 9562e12262646b4489cb3486fb950241, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.890327

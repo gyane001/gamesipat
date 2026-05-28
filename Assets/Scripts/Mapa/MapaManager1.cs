@@ -6,50 +6,39 @@ using UnityEngine.SceneManagement;
 public class MapaManager_1 : MonoBehaviour
 {
     public bool isBarrier = false;
+
     [Header("Transição de Cena")]
     public Animator transition;
     public float transitionTime = 1f;
 
-    public void CarregarFase(string nomeDaFase)
-    {
-        SceneManager.LoadScene(nomeDaFase);
-    }
-
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        StartCoroutine(LoadSceneWithTransition());
+        // Corrigido: adicionado os parênteses ()
+        StartCoroutine(RotinaTrocarCaminhos());
     }
 
-    private IEnumerator LoadSceneWithTransition()
+    private IEnumerator RotinaTrocarCaminhos()
     {
-       
-
-        if (SceneManager.GetActiveScene().name == "PF_1")
-        {
-             if (transition != null)
+        // 1. Faz a transição de cena e espera
+        if (transition != null)
         {
             transition.SetTrigger("Start");
             yield return new WaitForSeconds(transitionTime);
         }
+
+        // 2. Checa o nome da cena e carrega a próxima
+        string cenaAtual = SceneManager.GetActiveScene().name;
+
+        if (cenaAtual == "PF_1")
+        {
             SceneManager.LoadScene("Adm");
         }
-        else if (SceneManager.GetActiveScene().name == "Adm")
+        else if (cenaAtual == "Adm")
         {
-             if (transition != null)
-        {
-            transition.SetTrigger("Start");
-            yield return new WaitForSeconds(transitionTime);
+            SceneManager.LoadScene("Adm1");
         }
-            SceneManager.LoadScene("Adm 1");
-        }
-
-         else if (SceneManager.GetActiveScene().name == "Adm1")
+        else if (cenaAtual == "Adm1")
         {
-             if (transition != null)
-        {
-            transition.SetTrigger("Start");
-            yield return new WaitForSeconds(transitionTime);
-        }
             SceneManager.LoadScene("FimDeJogo");
         }
     }

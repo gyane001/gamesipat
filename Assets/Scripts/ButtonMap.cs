@@ -1,12 +1,15 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using System.Collections;
 public class BotaoMapa : MonoBehaviour
 {
     [Header("Configuração")]
     public string nomeDaCena;
     //  public int caminhoEscolhido = 0; // 1 para caminho Adm, 2 para caminho Fabrica
+    
+    public Animator transition;
+    public float transitionTime = 1f;
 
     void Start()
     {
@@ -16,28 +19,21 @@ public class BotaoMapa : MonoBehaviour
             btn.onClick.AddListener(TrocarCena);
         }
     }
- 
-    void TrocarCena()
+    
+public void TrocarCena()
     {
-        if (!string.IsNullOrEmpty(nomeDaCena))
-        {
-            SceneManager.LoadScene(nomeDaCena);
-        }
-        else
-        {
-            Debug.LogError("Erro: Nome da cena vazio no objeto " + gameObject.name);
-        }
+        // Inicia a corrotina
+        StartCoroutine(RotinaTrocarCena());
     }
 
-    public void IrCaminho1()
+    private IEnumerator RotinaTrocarCena()
     {
-        //string cenaAtual = SceneManager.GetActiveScene().name
-        SceneManager.LoadScene("PF_1");
-    }
-
-    public void IrCaminho2()
-    {
-        //string cenaAtual = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene("PF_2");
+        if (transition != null)
+        {
+            transition.SetTrigger("Start");
+            yield return new WaitForSeconds(transitionTime);
+        }
+        
+        SceneManager.LoadScene(nomeDaCena);
     }
 }

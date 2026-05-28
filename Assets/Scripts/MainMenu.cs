@@ -21,12 +21,6 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(CarregarCena("Menu"));
     }
 
-    public void ReiniciarJogo()
-    {
-        GameData.totalWins = 0;
-        StartCoroutine(CarregarCena("Menu"));
-    }
-
     public void QuitGame()
     {
         Debug.Log("O jogo fechou!");

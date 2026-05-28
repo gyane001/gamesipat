@@ -4,12 +4,12 @@
 #portrait:default
 Você está em deslocamento e um colega do seu turno passa correndo por você para “não se atrasar”, pois já estão quase atrasados para iniciar o turno. Não há nenhuma situação de emergência. O que você faz?
 
-*[Permaneço caminhando normalmente, mantendo atenção aos riscos do trajeto]
-    Excelente escolha! Manter a atenção no trajeto e não correr, reduz significativamente o risco de quedas e colisões. #win #portrait:PF_SITU_41
-    -> Fim
-
 *[Vou correr também para não me atrasar]
     Correr reduz sua capacidade de reação e aumenta o risco de acidentes. Siga o percurso com calma e atenção. Afinal, nenhuma tarefa é mais urgente que sua segurança. #portrait:PF_SITU_42
+    -> Fim
+    
+    *[Permaneço caminhando normalmente, mantendo atenção aos riscos do trajeto]
+    Excelente escolha! Manter a atenção no trajeto e não correr, reduz significativamente o risco de quedas e colisões. #win #portrait:PF_SITU_41
     -> Fim
 
 *[Oriento meu colega que correr pode causar acidentes]

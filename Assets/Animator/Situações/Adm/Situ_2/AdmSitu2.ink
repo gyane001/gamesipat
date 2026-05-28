@@ -10,8 +10,7 @@ Você está descendo a escada e recebe uma mensagem. O que você faz?
 
 *[Paro na escada para ler a mensagem segurando o corrimão]
     Escadas exigem atenção total e uso do corrimão. #portrait:PF_ADM_22 #win  
-Quedas são acidentes comuns e totalmente evitáveis. 
-
+Quedas são acidentes comuns e evitáveis. 
     -> Fim
 
 *[Ignoro a mensagem e continuo segurando o corrimão]

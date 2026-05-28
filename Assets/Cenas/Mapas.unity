@@ -515,6 +515,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nomeDaCena: PF_1
+  transition: {fileID: 998746679}
+  transitionTime: 1
 --- !u!114 &388957710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,7 +563,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 388957709}
         m_TargetAssemblyTypeName: BotaoMapa, Assembly-CSharp
-        m_MethodName: IrCaminho1
+        m_MethodName: TrocarCena
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1809,6 +1811,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nomeDaCena: PF_2
+  transition: {fileID: 998746679}
+  transitionTime: 1
 --- !u!114 &2077938947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1855,7 +1859,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2077938946}
         m_TargetAssemblyTypeName: BotaoMapa, Assembly-CSharp
-        m_MethodName: IrCaminho2
+        m_MethodName: TrocarCena
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
