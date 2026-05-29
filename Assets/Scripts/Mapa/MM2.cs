@@ -10,7 +10,7 @@ public class MM2 : MonoBehaviour
     [Header("Transição de Cena")]
     public Animator transition;
     public float transitionTime = 1f;
-
+    
     private void OnTriggerEnter2D(Collider2D collider)
     {
         // Corrigido: adicionado os parênteses ()

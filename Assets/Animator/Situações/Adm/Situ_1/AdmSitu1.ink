@@ -2,7 +2,7 @@
 
 === SituacaoADM_1_1 ===
 #portrait:default
-Piso molhado próximo ao banheiro: Há uma placa de “Piso Molhado” e uma pequena área úmida no chão. Qual seu comportamento?
+Há uma placa de “Piso Molhado” e uma pequena área úmida no chão. Qual seu comportamento?
 
 *[Passo rapidamente antes que alguém veja]
     Ignorar a sinalização aumenta o risco de escorregões, quedas e lesões. Sempre desvie da área sinalizada (molhada) evitando acidentes. #portrait:PF_ADM_11
