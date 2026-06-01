@@ -45,6 +45,6 @@ public class Resultados : MonoBehaviour
     public void ReiniciarJogo()
     {
         GameData.totalWins = 0; // Resetamos os pontos para começar de novo
-        SceneManager.LoadScene("MenuPrincipal"); // Substitua pelo nome da sua cena de menu
+        SceneManager.LoadScene("Menu"); // Substitua pelo nome da sua cena de menu
     }
 }
